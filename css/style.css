@@ -1,6 +1,6 @@
 #footer {
   /* background: transparent !important; */
-  background: linear-gradient(to bottom right, rgb(168, 218, 243, .5), rgb(255, 217, 223, .5)) !important;
+  background: linear-gradient(to bottom right, rgb(168, 218, 243), rgb(255, 217, 223)) !important;
   font-size: 20px !important;
 }
 
@@ -40,7 +40,7 @@
 }
 
 /* 去除导航栏选项中底下的蓝条 */
-#nav *::after {
+#nav ::after {
   background-color: transparent !important;
 }
 
