@@ -19,20 +19,6 @@
 ]]></content>
   </entry>
   <entry>
-    <title>TypeScript</title>
-    <url>/2024/04/18/%E5%89%8D%E7%AB%AF/TypeScript/</url>
-    <content><![CDATA[<p>jjjjjjj</p>
-]]></content>
-      <categories>
-        <category>前端</category>
-        <category>TypeScript</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>TypeScript</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>免费搭建自己的博客(Hexo+Butterfly+github)</title>
     <url>/2024/04/18/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/buildBlog/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本博客搭建主要采用了<code>Hexo</code>静态博客框架、<code>Butterfly</code>主题和<code>Github</code>的pages服务等，其优点在于完全免费而且稳定简单，缺点是github在国内的访问速度有点慢，当然可以选择部署到gitee上。</p>
@@ -83,5 +69,103 @@
 <p>4.最后依次运行<code>hexo clean</code>、 <code>hexo douban</code>、<code>hexo g</code>、 <code>hexo s</code>、 <code>hexo deploy</code>来进行部署.</p>
 <h3 id="创建图床"><a href="#创建图床" class="headerlink" title="创建图床"></a>创建图床</h3><p>由于相册和文章需要上传图片，这会导致网站的加载速度非常慢，所以创建一个图床用来存放图片是很有必要的。<br>1.下载图片压缩软件<code>Caesium Image Compressor</code>和上传图片软件<code>PicGo</code>,在github创建一个仓库作为图床用来存放上传的图片。然后在新建仓库上创建token.点击右上角选择Settings -&gt; 下拉找到 Developer Settings -&gt; 下拉选择Personal access tokens 下面的Tokens (classic),点击Generate new token 创建新的token.<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://jsd.cdn.zzko.cn/gh/Jurphy/Figure-bed/img/topImg/%E5%88%9B%E5%BB%BAtoken.png" alt="创建token"><br>2.打开PicGo软件，点击图床设置 -&gt;GitHub,然后设置如下内容：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://jsd.cdn.zzko.cn/gh/Jurphy/Figure-bed/img/topImg/%E5%9B%BE%E5%BA%8A%E8%AE%BE%E7%BD%AE.png" alt="图床设置"><br>3.点击上传区就可以把压缩过的图片进行上传，上传完成后点击相册，找到需要的图片复制连接就可以使用了。</p>
 ]]></content>
+  </entry>
+  <entry>
+    <title>npm install XXXXX 加上-s、-d、-g和什么都不加的区别?</title>
+    <url>/2024/04/18/%E5%89%8D%E7%AB%AF/Npm/install/</url>
+    <content><![CDATA[<h3 id="npm-install-XXXXX-s-局部安装"><a href="#npm-install-XXXXX-s-局部安装" class="headerlink" title="npm install XXXXX -s(局部安装)"></a>npm install XXXXX -s(局部安装)</h3><p>相当于npm install XXXXX -save，是生产环境（dependencies）上的依赖，上线之后还需要用到的，例如安装：echarts和element-ui等。</p>
+<h3 id="npm-install-XXXXX-g-全局安装"><a href="#npm-install-XXXXX-g-全局安装" class="headerlink" title="npm install XXXXX -g(全局安装)"></a>npm install XXXXX -g(全局安装)</h3><p>相当于npm install XXXXX -global表示全局安装，安装一次过后，你就可以在其他地方直接用了。</p>
+<h3 id="npm-install-XXXXX-d-局部安装"><a href="#npm-install-XXXXX-d-局部安装" class="headerlink" title="npm install XXXXX -d(局部安装)"></a>npm install XXXXX -d(局部安装)</h3><p>相当于npm install module_name –save-dev，是开发环境（devDependencies ）下的依赖管理，只在开发阶段使用，例如安装：webpack、babel和vite等。</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>Npm</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>Npm</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>TypeScript</title>
+    <url>/2024/04/18/%E5%89%8D%E7%AB%AF/TS/TypeScript/</url>
+    <content><![CDATA[<h1 id="TypeScript的基本概念"><a href="#TypeScript的基本概念" class="headerlink" title="TypeScript的基本概念"></a>TypeScript的基本概念</h1><h2 id="TS是什么？"><a href="#TS是什么？" class="headerlink" title="TS是什么？"></a>TS是什么？</h2><p>1.TS，是 JavaScript 的超集(JS有的TS都有)，在js的基础上添加了类型支持。<br>2.TypeScript 属于静态类型的编程语言，JavaScript 属于动态类型的编程语言。</p>
+<ul>
+<li>静态类型：编译期做类型检查</li>
+<li>动态类型：执行期做类型检查</li>
+</ul>
+<h2 id="TypeScript类型概述"><a href="#TypeScript类型概述" class="headerlink" title="TypeScript类型概述"></a>TypeScript类型概述</h2><p>可以将 TS 中的常用基础类型细分为两类：<br>1.JS 已有类型</p>
+<p><code>原始类型</code>，简单类型（number&#x2F;string&#x2F;boolean&#x2F;null&#x2F;undefined）<br><code>复杂数据类型</code>（数组，对象，函数等）<br>2.TS 新增类型</p>
+<p><code>联合类型</code><br><code>自定义类型（类型别名）</code><br><code>接口</code><br><code>元组</code><br><code>字面量类型</code><br><code>枚举</code><br><code>void</code></p>
+<h3 id="原始数据类型"><a href="#原始数据类型" class="headerlink" title="原始数据类型"></a>原始数据类型</h3><p>原始类型：number&#x2F;string&#x2F;boolean&#x2F;null&#x2F;undefinrd</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">let</span> myAge: number = 25</span><br><span class="line"><span class="built_in">let</span> myName: string = <span class="string">&#x27;Jurphy&#x27;</span></span><br><span class="line"><span class="built_in">let</span> isMan: boolean = <span class="literal">false</span></span><br></pre></td></tr></table></figure>
+<h3 id="数组类型"><a href="#数组类型" class="headerlink" title="数组类型"></a>数组类型</h3><p>有两种写法，推荐[ ]写法</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 写法一</span></span><br><span class="line"><span class="built_in">let</span> numbers: number[] =[1, 2, 3, 4, 5, 6]</span><br><span class="line"><span class="comment"># 写法二</span></span><br><span class="line"><span class="built_in">let</span> numbers: Array&lt;number&gt; =[1, 2, 3, 4, 5, 6]</span><br></pre></td></tr></table></figure>
+<h3 id="联合类型"><a href="#联合类型" class="headerlink" title="联合类型"></a>联合类型</h3><p>可以将多个类型组合成一个类型，<code>|</code>（竖线）在 TS 中叫做联合类型</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 数组中既有 number 类型，又有 string 类型</span></span><br><span class="line"><span class="built_in">let</span> arr:(number | string)[] =[1,2,3,4,5,6,7,<span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;b&#x27;</span>,<span class="string">&#x27;c&#x27;</span>,<span class="string">&#x27;d&#x27;</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="类型别名"><a href="#类型别名" class="headerlink" title="类型别名"></a>类型别名</h3><p>为任意类型起别名，当同一类型（复杂）被多次使用时，可以通过类型别名，简化该类型的使用</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># type 关键字来创建自定义类型</span></span><br><span class="line"><span class="built_in">type</span> TestArray = (number | string)[]</span><br><span class="line"><span class="built_in">let</span> textArr1: TestArray =[1, 2, 3, 4, 5, 6, 7, <span class="string">&#x27;a&#x27;</span>, <span class="string">&#x27;b&#x27;</span>, <span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;e&#x27;</span>]</span><br><span class="line"><span class="built_in">let</span> textArr2: TestArray =[1,4, 5, 6, 7, <span class="string">&#x27;a&#x27;</span>,<span class="string">&#x27;c&#x27;</span>, <span class="string">&#x27;d&#x27;</span>, <span class="string">&#x27;e&#x27;</span>]</span><br></pre></td></tr></table></figure>
+<h3 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h3><p>函数的类型实际上指的是：<code>函数参数</code>和<code>返回值</code>的类型,为函数指定类型的方式有两种：<br>1.单独指定参数、返回值的类型</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 函数声明</span></span><br><span class="line"><span class="keyword">function</span> add(num1: number, num2: number): number &#123;</span><br><span class="line">  <span class="built_in">return</span> num1 + num2</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 箭头函数</span></span><br><span class="line">const add = (num1: number, num2: number): number =&gt; &#123;</span><br><span class="line">  <span class="built_in">return</span> num1 + num2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.同时指定参数、返回值的类型</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">type</span> AddFn = (num1: number, num2: number) =&gt; number</span><br><span class="line"></span><br><span class="line">const add: AddFn = (num1, num2) =&gt; &#123;</span><br><span class="line">  <span class="built_in">return</span> num1 + num2</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="void-类型"><a href="#void-类型" class="headerlink" title="void 类型"></a>void 类型</h3><p>如果函数没有返回值，那么，函数返回值类型为：void</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> greet(name: string): void &#123;</span><br><span class="line">  console.log(<span class="string">&#x27;Hello&#x27;</span>, name)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="可选参数"><a href="#可选参数" class="headerlink" title="可选参数"></a>可选参数</h3><p>使用函数实现某个功能时，参数可以传也可以不传。这种情况下，在给函数参数指定类型时，就用到可选参数了,可选参数只能出现在参数列表的最后，也就是说可选参数后面不能再出现必选参数。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> mySlice(start?: number, end?: number): void &#123;</span><br><span class="line">  console.log(<span class="string">&#x27;起始索引：&#x27;</span>, start, <span class="string">&#x27;结束索引：&#x27;</span>, end)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="对象类型"><a href="#对象类型" class="headerlink" title="对象类型"></a>对象类型</h3><p>JS中的对象是由属性和方法构成的，而TS对象的类型就是在描述对象的结构（有什么类型的属性和方法）。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 既有属性又有方法的对象</span></span><br><span class="line"><span class="comment"># 在一行代码中指定对象的多个属性类型时，使用 `;`（分号）来分隔</span></span><br><span class="line"><span class="built_in">let</span> person: &#123; name: string; sayHi(): void &#125; = &#123;</span><br><span class="line">  name: <span class="string">&#x27;jack&#x27;</span>,</span><br><span class="line">  <span class="function"><span class="title">sayHi</span></span>() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 对象中如果有多个类型，可以换行写：</span></span><br><span class="line"><span class="comment"># 通过换行来分隔多个属性类型，可以去掉 `;`</span></span><br><span class="line"><span class="built_in">let</span> person: &#123;</span><br><span class="line">  name: string</span><br><span class="line">  sayHi(): void</span><br><span class="line">&#125; = &#123;</span><br><span class="line">  name: <span class="string">&#x27;jack&#x27;</span>,</span><br><span class="line">  <span class="function"><span class="title">sayHi</span></span>() &#123;&#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#v直接使用 &#123;&#125; 形式为对象添加类型，会降低代码的可读性（不好辨识类型和值）</span></span><br><span class="line">// 创建类型别名</span><br><span class="line"><span class="built_in">type</span> Person = &#123;</span><br><span class="line">  name: string</span><br><span class="line">  sayHi(): void</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">// 使用类型别名作为对象的类型：</span><br><span class="line"><span class="built_in">let</span> person: Person = &#123;</span><br><span class="line">  name: <span class="string">&#x27;jack&#x27;</span>,</span><br><span class="line">  <span class="function"><span class="title">sayHi</span></span>() &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="对象可选属性"><a href="#对象可选属性" class="headerlink" title="对象可选属性"></a>对象可选属性</h4><p>对象的属性或方法，也可以是可选的，此时就用到可选属性了</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">type</span> Config = &#123;</span><br><span class="line">  url: string</span><br><span class="line">  method?: string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> myAxios(config: Config) &#123;</span><br><span class="line">  console.log(config)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="接口类型"><a href="#接口类型" class="headerlink" title="接口类型"></a>接口类型</h3><p>当一个对象类型被多次使用时，一般会使用接口（interface）来描述对象的类型，达到复用的目的(推荐以 <code>I</code> 开头)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface IPerson &#123;</span><br><span class="line">  name: string</span><br><span class="line">  age: number</span><br><span class="line">  sayHi(): void</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> person: IPerson = &#123;</span><br><span class="line">  name: <span class="string">&#x27;jack&#x27;</span>,</span><br><span class="line">  age: 19,</span><br><span class="line">  <span class="function"><span class="title">sayHi</span></span>() &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h4 id="interface-vs-type"><a href="#interface-vs-type" class="headerlink" title="interface vs type"></a>interface vs type</h4><p> interface（接口）和 type（类型别名）的对比：<br>1.相同点：都可以给对象指定类型<br>2.不同点:</p>
+<ul>
+<li>接口，只能为对象指定类型</li>
+<li>类型别名，不仅可以为对象指定类型，实际上可以为任意类型指定别名</li>
+</ul>
+<p>3.推荐：能使用 type 就是用 <code>type</code></p>
+<h4 id="接口继承"><a href="#接口继承" class="headerlink" title="接口继承"></a>接口继承</h4><p>如果两个接口之间有相同的属性或方法，可以将公共的属性或方法抽离出来，通过继承来实现复用。</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface Point2D &#123; x: number; y: number &#125;</span><br><span class="line">// 继承 Point2D</span><br><span class="line">interface Point3D extends Point2D &#123;</span><br><span class="line">  z: number</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="元组类型"><a href="#元组类型" class="headerlink" title="元组类型"></a>元组类型</h3><p>元组类型是另一种类型的数组，它确切地知道包含多少个元素，以及特定索引对应的类型,(场景：在地图中，使用经纬度坐标来标记位置信息)</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">let</span> position: [number, number] = [39.5427, 116.2317]</span><br></pre></td></tr></table></figure>
+<h3 id="类型推论"><a href="#类型推论" class="headerlink" title="类型推论"></a>类型推论</h3><p>发生类型推论的 2 种常见场景:</p>
+<ul>
+<li>声明变量并初始化时</li>
+<li>决定函数返回值时</li>
+</ul>
+<h3 id="枚举类型"><a href="#枚举类型" class="headerlink" title="枚举类型"></a>枚举类型</h3><p>枚举的功能类似于<code>字面量类型</code>+<code>联合类型</code>组合的功能，也可以表示一组明确的可选值</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建枚举</span></span><br><span class="line">enum Direction &#123; Up, Down, Left, Right &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 使用枚举类型</span></span><br><span class="line"><span class="keyword">function</span> changeDirection(direction: Direction) &#123;</span><br><span class="line">  console.log(direction)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 调用函数时，需要应该传入：枚举 Direction 成员的任意一个</span></span><br><span class="line"><span class="comment"># 类似于 JS 中的对象，直接通过 点（.）语法 访问枚举的成员</span></span><br><span class="line">changeDirection(Direction.Up)</span><br></pre></td></tr></table></figure>
+<h4 id="数字枚举"><a href="#数字枚举" class="headerlink" title="数字枚举"></a>数字枚举</h4><p>枚举成员的值为数字的枚举,可以有自增长行为</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># Down -&gt; 11、Left -&gt; 12、Right -&gt; 13</span></span><br><span class="line">enum Direction &#123; Up = 10, Down, Left, Right &#125;</span><br><span class="line"></span><br><span class="line">enum Direction &#123; Up = 2, Down = 4, Left = 8, Right = 16 &#125;</span><br></pre></td></tr></table></figure>
+<h4 id="字符串枚举"><a href="#字符串枚举" class="headerlink" title="字符串枚举"></a>字符串枚举</h4><p>枚举成员的值是字符串,字符串枚举的每个成员必须有<code>初始值</code></p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">enum Direction &#123;</span><br><span class="line">  Up = <span class="string">&#x27;UP&#x27;</span>,</span><br><span class="line">  Down = <span class="string">&#x27;DOWN&#x27;</span>,</span><br><span class="line">  Left = <span class="string">&#x27;LEFT&#x27;</span>,</span><br><span class="line">  Right = <span class="string">&#x27;RIGHT&#x27;</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="字面量类型"><a href="#字面量类型" class="headerlink" title="字面量类型"></a>字面量类型</h3><p>字面量类型配合联合类型一起使用</p>
+<h3 id="any-类型"><a href="#any-类型" class="headerlink" title="any 类型"></a>any 类型</h3><p>不推荐使用 <code>any</code>! 这会失去 TS 类型保护的优势</p>
+<h3 id="类型断言"><a href="#类型断言" class="headerlink" title="类型断言"></a>类型断言</h3><p>有时候你会比 TS 更加明确一个值的类型，此时，可以使用类型断言来指定更具体的类型</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用 as 关键字实现类型断言</span></span><br><span class="line"><span class="comment"># 关键字 as 后面的类型是一个更加具体的类型（HTMLAnchorElement 是 HTMLElement 的子类型）</span></span><br><span class="line">const aLink = document.getElementById(<span class="string">&#x27;link&#x27;</span>) as HTMLAnchorElement</span><br></pre></td></tr></table></figure>
+<h2 id="TypeScript泛型"><a href="#TypeScript泛型" class="headerlink" title="TypeScript泛型"></a>TypeScript泛型</h2><p>泛型是可以在保证类型安全前提下，让函数等与多种类型一起工作，从而实现复用，常用于：函数、接口、class 中</p>
+<h3 id="泛型函数"><a href="#泛型函数" class="headerlink" title="泛型函数"></a>泛型函数</h3><p>1.定义泛型函数</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 类型变量 Type，是一种特殊类型的变量，它处理类型而不是值</span></span><br><span class="line"><span class="keyword">function</span> <span class="built_in">id</span>&lt;Type&gt;(value: Type): Type &#123; <span class="built_in">return</span> value &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="built_in">id</span>&lt;T&gt;(value: T): T &#123; <span class="built_in">return</span> value &#125;</span><br></pre></td></tr></table></figure>
+<p>2.调用泛型函数</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">const num = <span class="built_in">id</span>&lt;number&gt;(10)</span><br><span class="line">const str = <span class="built_in">id</span>&lt;string&gt;(<span class="string">&#x27;a&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<p>2.简化泛型函数调用</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 类型参数推断的机制</span></span><br><span class="line">const num = <span class="built_in">id</span>(10)</span><br><span class="line">const str = <span class="built_in">id</span>(<span class="string">&#x27;a&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h4 id="泛型约束"><a href="#泛型约束" class="headerlink" title="泛型约束"></a>泛型约束</h4><p>1.指定更加具体的类型</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="built_in">id</span>&lt;Type&gt;(value: Type[]): Type[] &#123;</span><br><span class="line">  console.log(value.length)</span><br><span class="line">  <span class="built_in">return</span> value</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>2.添加约束</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建一个接口</span></span><br><span class="line">interface ILength &#123; length: number &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#  Type extends ILength 添加泛型约束</span></span><br><span class="line"><span class="comment">#  解释：表示传入的 类型 必须满足 ILength 接口的要求才行，也就是得有一个 number 类型的 length 属性</span></span><br><span class="line"><span class="keyword">function</span> <span class="built_in">id</span>&lt;Type extends ILength&gt;(value: Type): Type &#123;</span><br><span class="line">  console.log(value.length)</span><br><span class="line">  <span class="built_in">return</span> value</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="泛型接口"><a href="#泛型接口" class="headerlink" title="泛型接口"></a>泛型接口</h3><p>接口也可以配合泛型来使用，以增加其灵活性，增强其复用性</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface IdFunc&lt;Type&gt; &#123;</span><br><span class="line">  <span class="built_in">id</span>: (value: Type) =&gt; Type</span><br><span class="line">  ids: () =&gt; Type[]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> obj: IdFunc&lt;number&gt; = &#123;</span><br><span class="line">  <span class="built_in">id</span>(value) &#123; <span class="built_in">return</span> value &#125;,</span><br><span class="line">  <span class="function"><span class="title">ids</span></span>() &#123; <span class="built_in">return</span> [1, 3, 5] &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>TypeScript</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>TypeScript</tag>
+      </tags>
   </entry>
 </search>
