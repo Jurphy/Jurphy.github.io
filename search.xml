@@ -22,14 +22,19 @@
     <title>免费搭建自己的博客(Hexo+Butterfly+github)</title>
     <url>/2024/04/18/%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/buildBlog/</url>
     <content><![CDATA[<h3 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h3><p>本博客搭建主要采用了<code>Hexo</code>静态博客框架、<code>Butterfly</code>主题和<code>Github</code>的pages服务等，其优点在于完全免费而且稳定简单，缺点是github在国内的访问速度有点慢，当然可以选择部署到gitee上。</p>
-<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><p>1.安装<a href="https://nodejs.org/en/">Node.js</a><br>2.安装<a href="https://git-scm.com/downloads">Git</a><br>3.检测Node和Git是否安装成功<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://jsd.cdn.zzko.cn/gh/Jurphy/Figure-bed/img/topImg/%E7%89%88%E6%9C%AC%E6%A3%80%E6%B5%8B.png" alt="检测安装"><br>4.注册并登录<a href="https://github.com/">GitHub</a>(需要用到邮箱)</p>
-<h3 id="本地安装Hexo并部署到gitHub上"><a href="#本地安装Hexo并部署到gitHub上" class="headerlink" title="本地安装Hexo并部署到gitHub上"></a>本地安装<a href="https://hexo.io/zh-cn/index.html">Hexo</a>并部署到gitHub上</h3><p>1.在本地新建一个文件夹(如：myBlog)，右键点击文件夹，选择 <code>Git Bash Here</code>,也可以打开cmd,切换到该文件夹<br>2.安装<code>Hexo</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure>
-<p>3.初始化<code>hexo</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init      <span class="comment"># 初始化</span></span><br><span class="line">npm install    <span class="comment"># 安装组件</span></span><br></pre></td></tr></table></figure>
-<p>4.本地预览，在<a href="http://localhost:4000进行访问">http://localhost:4000进行访问</a></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean <span class="comment">#清除缓存</span></span><br><span class="line">hexo g     <span class="comment">#生成页面</span></span><br><span class="line">hexo s     <span class="comment">#本地预览</span></span><br></pre></td></tr></table></figure>
-<p>5.连接GitHub</p>
+<h3 id="环境"><a href="#环境" class="headerlink" title="环境"></a>环境</h3><ol>
+<li>安装<a href="https://nodejs.org/en/">Node.js</a></li>
+<li>安装<a href="https://git-scm.com/downloads">Git</a></li>
+<li>检测Node和Git是否安装成功<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://jsd.cdn.zzko.cn/gh/Jurphy/Figure-bed/img/topImg/%E7%89%88%E6%9C%AC%E6%A3%80%E6%B5%8B.png" alt="检测安装"></li>
+<li>注册并登录<a href="https://github.com/">GitHub</a>(需要用到邮箱)</li>
+</ol>
+<h3 id="本地安装Hexo并部署到gitHub上"><a href="#本地安装Hexo并部署到gitHub上" class="headerlink" title="本地安装Hexo并部署到gitHub上"></a>本地安装<a href="https://hexo.io/zh-cn/index.html">Hexo</a>并部署到gitHub上</h3><ol>
+<li>在本地新建一个文件夹(如：myBlog)，右键点击文件夹，选择 <code>Git Bash Here</code>,也可以打开cmd,切换到该文件夹</li>
+<li>安装<code>Hexo</code><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install -g hexo-cli</span><br></pre></td></tr></table></figure></li>
+<li>初始化<code>hexo</code><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo init      <span class="comment"># 初始化</span></span><br><span class="line">npm install    <span class="comment"># 安装组件</span></span><br></pre></td></tr></table></figure></li>
+<li>本地预览，在<a href="http://localhost:4000进行访问">http://localhost:4000进行访问</a><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">hexo clean <span class="comment">#清除缓存</span></span><br><span class="line">hexo g     <span class="comment">#生成页面</span></span><br><span class="line">hexo s     <span class="comment">#本地预览</span></span><br></pre></td></tr></table></figure></li>
+<li>连接GitHub</li>
+</ol>
 <ul>
 <li>创建Github Pages仓库，点击github主页右上角的<code>+</code>号，选择<code>New repository</code>,Repository name 中输入 <code>用户名.github.io</code>,填好后点击 <code>Create repository</code>创建完成。</li>
 <li>右键选择Git Bash Here，设置用户名和邮箱。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git config --global user.name <span class="string">&quot;GitHub 用户名&quot;</span></span><br><span class="line">git config --global user.email <span class="string">&quot;GitHub 邮箱&quot;</span></span><br></pre></td></tr></table></figure></li>
@@ -37,38 +42,71 @@
 <li>添加密匙：进入 [C:\Users\用户名.ssh] 目录（要勾选显示“隐藏的项目”），用记事本打开公钥 <code>id_rsa.pub</code> 文件并复制里面的内容。登陆 GitHub ，进入 <code>Settings</code> 页面，选择左边栏的 <code>SSH and GPG keys</code>，点击 <code>New SSH key</code>。Title 随便取个名字，粘贴复制的<code> id_rsa.pub</code> 内容到 Key 中，点击 <code>Add SSH key</code> 完成添加。<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://jsd.cdn.zzko.cn/gh/Jurphy/Figure-bed/img/topImg/%E6%B7%BB%E5%8A%A0%E5%AF%86%E9%92%A5.png" alt="添加密钥成功"></li>
 <li>连接验证：输入 <code>ssh -T git@github.com</code>,出现以下结果：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://jsd.cdn.zzko.cn/gh/Jurphy/Figure-bed/img/topImg/%E8%BF%9E%E6%8E%A5%E9%AA%8C%E8%AF%81.png" alt="连接验证"></li>
 </ul>
-<p>6.部署Hexo到GitHub Pages</p>
+<ol start="6">
+<li>部署Hexo到GitHub Pages</li>
+</ol>
 <ul>
 <li>安装依赖<code>hexo-deployer-git</code><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br></pre></td></tr></table></figure></li>
 <li>然后修改<code> _config.yml</code> 文件末尾的 <code>Deployment</code> 部分，修改成如下：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">deploy:</span><br><span class="line">  <span class="built_in">type</span>: <span class="string">&#x27;git&#x27;</span></span><br><span class="line">  repository: git@github.com:用户名/用户名.github.io.git</span><br><span class="line">  branch: main</span><br></pre></td></tr></table></figure></li>
 <li>运行<code>hexo d</code>,访问https:&#x2F;&#x2F;用户名.github.io就可以看到我们部署到线上的博客了。</li>
 </ul>
-<p>7.开启HTTPS：打开博客所在GitHub仓库，Settings -&gt; 下拉找到 GitHub Pages -&gt; 勾选 Enforce HTTPS。</p>
-<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><p>我选择的是<a href="https://butterfly.js.org/">hexo-theme-butterfly</a>主题,可以打开看文档进行操作。<br>1.用npm在Hexo根目录里面安装<code>hexo-theme-butterfly</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-butterfly</span><br></pre></td></tr></table></figure>
-<p>2.修改 Hexo 根目录下的 <code>_config.yml</code>，把主题改为 <code>butterfly</code></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">theme: butterfly</span><br></pre></td></tr></table></figure>
-<p>3.如果你没有 pug 以及 stylus 的渲染器，请下载安装<code>hexo-renderer-pug</code> 和 h<code>exo-renderer-stylus</code>。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure>
-<p>4.在 hexo 的根目录创建一个文件 <code>_config.butterfly.yml</code>，并把主题目录的 _config.yml 内容复制到 _config.butterfly.yml(优先度较高) 去。<br>5.首先根据官方文档创建page页面(标签页、分类页、友情连接页和图库页面)。其次按照文档修改主题配置。</p>
-<h3 id="更换图标"><a href="#更换图标" class="headerlink" title="更换图标"></a>更换图标</h3><p>由于主题自带的<code>font-awesome v6</code> 图标不显示，我把图标换成了<a href="https://www.iconfont.cn/">iconfont</a>的图标。<br>1.注册登录后把目标图标放入购物车，点击购物后，创建项目，将图标加入创建的项目，点击编辑后，点击项目设置，把字体的颜色选上，保存后生成在线代码，点击<code>点此复制代码</code>把连接放入主题文件（_config.butterfly.yml）的<code>inject</code>配置项里面。</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">inject:</span><br><span class="line">  <span class="built_in">head</span>:</span><br><span class="line">    - &lt;<span class="built_in">link</span> rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;//at.alicdn.com/t/c/font_4504998_hzlxbwgwzk6.css&quot;</span>&gt;</span><br><span class="line">    - &lt;<span class="built_in">link</span> rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;css/style.css&quot;</span>&gt;</span><br></pre></td></tr></table></figure>
+<ol start="7">
+<li>开启HTTPS：打开博客所在GitHub仓库，Settings -&gt; 下拉找到 GitHub Pages -&gt; 勾选 Enforce HTTPS。</li>
+</ol>
+<h3 id="更换主题"><a href="#更换主题" class="headerlink" title="更换主题"></a>更换主题</h3><p>我选择的是<a href="https://butterfly.js.org/">hexo-theme-butterfly</a>主题,可以打开看文档进行操作。</p>
+<ol>
+<li>用npm在Hexo根目录里面安装<code>hexo-theme-butterfly</code><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-theme-butterfly</span><br></pre></td></tr></table></figure></li>
+<li>修改 Hexo 根目录下的 <code>_config.yml</code>，把主题改为 <code>butterfly</code><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">theme: butterfly</span><br></pre></td></tr></table></figure></li>
+<li>如果你没有 pug 以及 stylus 的渲染器，请下载安装<code>hexo-renderer-pug</code> 和 h<code>exo-renderer-stylus</code>。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-renderer-pug hexo-renderer-stylus --save</span><br></pre></td></tr></table></figure></li>
+<li>在 hexo 的根目录创建一个文件 <code>_config.butterfly.yml</code>，并把主题目录的 _config.yml 内容复制到 _config.butterfly.yml(优先度较高) 去。</li>
+<li>首先根据官方文档创建page页面(标签页、分类页、友情连接页和图库页面)。其次按照文档修改主题配置。</li>
+</ol>
+<h3 id="更换图标"><a href="#更换图标" class="headerlink" title="更换图标"></a>更换图标</h3><p>由于主题自带的<code>font-awesome v6</code> 图标不显示，我把图标换成了<a href="https://www.iconfont.cn/">iconfont</a>的图标。</p>
+<ol>
+<li>注册登录后把目标图标放入购物车，点击购物后，创建项目，将图标加入创建的项目，点击编辑后，点击项目设置，把字体的颜色选上，保存后生成在线代码，点击<code>点此复制代码</code>把连接放入主题文件（_config.butterfly.yml）的<code>inject</code>配置项里面。<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">inject:</span><br><span class="line">  <span class="built_in">head</span>:</span><br><span class="line">    - &lt;<span class="built_in">link</span> rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;//at.alicdn.com/t/c/font_4504998_hzlxbwgwzk6.css&quot;</span>&gt;</span><br><span class="line">    - &lt;<span class="built_in">link</span> rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;css/style.css&quot;</span>&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
 <h3 id="安装全局音乐播放器"><a href="#安装全局音乐播放器" class="headerlink" title="安装全局音乐播放器"></a>安装全局音乐播放器</h3><p>按照主题的进阶配置里面的<code>Butterfly添加全局吸底Aplayer教程</code>进行配置即可，安装 <code>hexo-tag-aplayer </code>插件，找出音乐列表的<code>data-id</code>填入即可。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 安装 hexo-tag-aplayer</span></span><br><span class="line">npm i hexo-tag-aplayer</span><br><span class="line"></span><br><span class="line">inject:</span><br><span class="line">  <span class="built_in">head</span>:</span><br><span class="line">    - &lt;<span class="built_in">link</span> rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;//at.alicdn.com/t/c/font_4504998_hzlxbwgwzk6.css&quot;</span>&gt;</span><br><span class="line">    - &lt;<span class="built_in">link</span> rel=<span class="string">&quot;stylesheet&quot;</span> href=<span class="string">&quot;css/style.css&quot;</span>&gt;</span><br><span class="line">  bottom:</span><br><span class="line">    - &lt;div class=<span class="string">&quot;aplayer no-destroy&quot;</span> data-id=<span class="string">&quot;142376088&quot;</span> data-server=<span class="string">&quot;netease&quot;</span> data-type=<span class="string">&quot;playlist&quot;</span> data-fixed=<span class="string">&quot;true&quot;</span> data-autoplay=<span class="string">&quot;true&quot;</span>&gt; &lt;/div&gt;</span><br></pre></td></tr></table></figure>
-<h3 id="安装看板娘"><a href="#安装看板娘" class="headerlink" title="安装看板娘"></a>安装看板娘</h3><p>根据我的主题，我选择了我喜欢的猫咪tororo。<br>1.安装<code>hexo-helper-live2d </code>插件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure>
-<p>2.选择自己喜欢的看板娘进行安装</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install live2d-widget-model-tororo  <span class="comment">#假设你选择的看板娘是tororo</span></span><br></pre></td></tr></table></figure>
-<p>3.修改<code>_config.yml</code>配置文件,添加如下内容：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">  <span class="comment">## Live2D看板娘</span></span><br><span class="line">live2d:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  model:</span><br><span class="line">    <span class="comment">#模板目录，在node_modules里</span></span><br><span class="line">    use: live2d-widget-model-tororo</span><br><span class="line">  display:</span><br><span class="line">    position: left</span><br><span class="line">    width: 200</span><br><span class="line">    height: 850</span><br><span class="line">  mobile:</span><br><span class="line">    <span class="comment"># 在手机端显示</span></span><br><span class="line">    show: <span class="literal">true</span>   </span><br><span class="line">  rect:</span><br><span class="line">    opacity:0.7</span><br></pre></td></tr></table></figure>
-<p>4.然后依次运行<code>hexo clean</code>、 <code>hexo g</code>、 <code>hexo s</code>、 <code>hexo d</code>来进行部署。</p>
-<h3 id="添加书单、影单和游戏"><a href="#添加书单、影单和游戏" class="headerlink" title="添加书单、影单和游戏"></a>添加书单、影单和游戏</h3><p>1.安装豆瓣插件</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-douban --save-dev</span><br></pre></td></tr></table></figure>
-<p>2.注册登录自己的豆瓣app,创建自己的书单，影单和游戏列表。<br>3.复制自己的user ID（右上角点击 “个人主页” ，这时候地址栏的URL大概是这样：”<a href="https://www.douban.com/people/xxxxxx/">https://www.douban.com/people/xxxxxx/</a>“ ，其中的”xxxxxx”就是你的个人ID了），然后在博客站点的配置文件 _config.yml 中添加以下内容：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 电影视频</span></span><br><span class="line">douban:</span><br><span class="line">  user: XXXXXX</span><br><span class="line">  <span class="built_in">builtin</span>: <span class="literal">false</span></span><br><span class="line">  book:</span><br><span class="line">    title: <span class="string">&#x27;书籍&#x27;</span></span><br><span class="line">    quote: <span class="string">&#x27;书籍便是这种改造灵魂的工具。人类所需要的，是富有启发性的养料。而阅读，则正是这种养料。 ——雨果&#x27;</span></span><br><span class="line">    meta: <span class="literal">true</span></span><br><span class="line">    comments: <span class="literal">true</span></span><br><span class="line">    top_img: https://ts1.cn.mm.bing.net/th/id/R-C.e11a4ca935812229084dc294cdff6ce0?rik=KLOSLFzeX3%2fQrg&amp;riu=http%3a%2f%2fwww.51pptmoban.com%2fd%2ffile%2f2013%2f10%2f21%2fced1914e83545cbc41ac53095f6a5ec3.jpg&amp;ehk=ruFTGXnawTxr0ZTMUBYUXdsvzaWvXj17Xf3wOjKblzA%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0&amp;sres=1&amp;sresct=1</span><br><span class="line">    aside: <span class="literal">true</span></span><br><span class="line">    path: books</span><br><span class="line">    <span class="built_in">limit</span>:</span><br><span class="line">  movie:</span><br><span class="line">    title: <span class="string">&#x27;电影&#x27;</span></span><br><span class="line">    quote: <span class="string">&#x27;一部伟大的影片是一部含义如此清新、富于想象、引人入胜或令人激奋的影片，它使我们对人生有新的看法。 ——〔美〕波·凯尔 《电影——绝望的艺术》&#x27;</span></span><br><span class="line">    meta: <span class="literal">true</span></span><br><span class="line">    comments: <span class="literal">true</span></span><br><span class="line">    top_img: https://jsd.cdn.zzko.cn/gh/Jurphy/Figure-bed/img/topImg/topimg1.jpg</span><br><span class="line">    aside: <span class="literal">true</span></span><br><span class="line">    path: movies</span><br><span class="line">    <span class="built_in">limit</span>:</span><br><span class="line">  game:</span><br><span class="line">    title: <span class="string">&#x27;游戏&#x27;</span></span><br><span class="line">    quote: <span class="string">&#x27;我不是沉迷于游戏，我是在修行。 ——陈思宇&#x27;</span></span><br><span class="line">    meta: <span class="literal">true</span></span><br><span class="line">    comments: <span class="literal">true</span></span><br><span class="line">    top_img: https://img.zcool.cn/community/01fca8581aee9ca84a0e282b96d047.jpg@2o.jpg</span><br><span class="line">    aside: <span class="literal">true</span></span><br><span class="line">    path: games</span><br><span class="line">    <span class="built_in">limit</span>:</span><br><span class="line">  <span class="built_in">timeout</span>: 10000 </span><br></pre></td></tr></table></figure>
-<p>4.最后依次运行<code>hexo clean</code>、 <code>hexo douban</code>、<code>hexo g</code>、 <code>hexo s</code>、 <code>hexo deploy</code>来进行部署.</p>
-<h3 id="创建图床"><a href="#创建图床" class="headerlink" title="创建图床"></a>创建图床</h3><p>由于相册和文章需要上传图片，这会导致网站的加载速度非常慢，所以创建一个图床用来存放图片是很有必要的。<br>1.下载图片压缩软件<code>Caesium Image Compressor</code>和上传图片软件<code>PicGo</code>,在github创建一个仓库作为图床用来存放上传的图片。然后在新建仓库上创建token.点击右上角选择Settings -&gt; 下拉找到 Developer Settings -&gt; 下拉选择Personal access tokens 下面的Tokens (classic),点击Generate new token 创建新的token.<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://jsd.cdn.zzko.cn/gh/Jurphy/Figure-bed/img/topImg/%E5%88%9B%E5%BB%BAtoken.png" alt="创建token"><br>2.打开PicGo软件，点击图床设置 -&gt;GitHub,然后设置如下内容：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://jsd.cdn.zzko.cn/gh/Jurphy/Figure-bed/img/topImg/%E5%9B%BE%E5%BA%8A%E8%AE%BE%E7%BD%AE.png" alt="图床设置"><br>3.点击上传区就可以把压缩过的图片进行上传，上传完成后点击相册，找到需要的图片复制连接就可以使用了。</p>
+<h3 id="安装看板娘"><a href="#安装看板娘" class="headerlink" title="安装看板娘"></a>安装看板娘</h3><p>根据我的主题，我选择了我喜欢的猫咪tororo。</p>
+<ol>
+<li>安装<code>hexo-helper-live2d </code>插件<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br></pre></td></tr></table></figure></li>
+<li>选择自己喜欢的看板娘进行安装<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install live2d-widget-model-tororo  <span class="comment">#假设你选择的看板娘是tororo</span></span><br></pre></td></tr></table></figure></li>
+<li>修改<code>_config.yml</code>配置文件,添加如下内容：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">  <span class="comment">## Live2D看板娘</span></span><br><span class="line">live2d:</span><br><span class="line">  <span class="built_in">enable</span>: <span class="literal">true</span></span><br><span class="line">  pluginModelPath: assets/</span><br><span class="line">  model:</span><br><span class="line">    <span class="comment">#模板目录，在node_modules里</span></span><br><span class="line">    use: live2d-widget-model-tororo</span><br><span class="line">  display:</span><br><span class="line">    position: left</span><br><span class="line">    width: 200</span><br><span class="line">    height: 850</span><br><span class="line">  mobile:</span><br><span class="line">    <span class="comment"># 在手机端显示</span></span><br><span class="line">    show: <span class="literal">true</span>   </span><br><span class="line">  rect:</span><br><span class="line">    opacity:0.7</span><br></pre></td></tr></table></figure></li>
+<li>然后依次运行<code>hexo clean</code>、 <code>hexo g</code>、 <code>hexo s</code>、 <code>hexo d</code>来进行部署。</li>
+</ol>
+<h3 id="添加书单、影单和游戏"><a href="#添加书单、影单和游戏" class="headerlink" title="添加书单、影单和游戏"></a>添加书单、影单和游戏</h3><ol>
+<li>安装豆瓣插件<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">npm install hexo-douban --save-dev</span><br></pre></td></tr></table></figure></li>
+<li>注册登录自己的豆瓣app,创建自己的书单，影单和游戏列表。<br>3.复制自己的user ID（右上角点击 “个人主页” ，这时候地址栏的URL大概是这样：”<a href="https://www.douban.com/people/xxxxxx/">https://www.douban.com/people/xxxxxx/</a>“ ，其中的”xxxxxx”就是你的个人ID了），然后在博客站点的配置文件 _config.yml 中添加以下内容：<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 电影视频</span></span><br><span class="line">douban:</span><br><span class="line">  user: XXXXXX</span><br><span class="line">  <span class="built_in">builtin</span>: <span class="literal">false</span></span><br><span class="line">  book:</span><br><span class="line">    title: <span class="string">&#x27;书籍&#x27;</span></span><br><span class="line">    quote: <span class="string">&#x27;书籍便是这种改造灵魂的工具。人类所需要的，是富有启发性的养料。而阅读，则正是这种养料。 ——雨果&#x27;</span></span><br><span class="line">    meta: <span class="literal">true</span></span><br><span class="line">    comments: <span class="literal">true</span></span><br><span class="line">    top_img: https://ts1.cn.mm.bing.net/th/id/R-C.e11a4ca935812229084dc294cdff6ce0?rik=KLOSLFzeX3%2fQrg&amp;riu=http%3a%2f%2fwww.51pptmoban.com%2fd%2ffile%2f2013%2f10%2f21%2fced1914e83545cbc41ac53095f6a5ec3.jpg&amp;ehk=ruFTGXnawTxr0ZTMUBYUXdsvzaWvXj17Xf3wOjKblzA%3d&amp;risl=&amp;pid=ImgRaw&amp;r=0&amp;sres=1&amp;sresct=1</span><br><span class="line">    aside: <span class="literal">true</span></span><br><span class="line">    path: books</span><br><span class="line">    <span class="built_in">limit</span>:</span><br><span class="line">  movie:</span><br><span class="line">    title: <span class="string">&#x27;电影&#x27;</span></span><br><span class="line">    quote: <span class="string">&#x27;一部伟大的影片是一部含义如此清新、富于想象、引人入胜或令人激奋的影片，它使我们对人生有新的看法。 ——〔美〕波·凯尔 《电影——绝望的艺术》&#x27;</span></span><br><span class="line">    meta: <span class="literal">true</span></span><br><span class="line">    comments: <span class="literal">true</span></span><br><span class="line">    top_img: https://jsd.cdn.zzko.cn/gh/Jurphy/Figure-bed/img/topImg/topimg1.jpg</span><br><span class="line">    aside: <span class="literal">true</span></span><br><span class="line">    path: movies</span><br><span class="line">    <span class="built_in">limit</span>:</span><br><span class="line">  game:</span><br><span class="line">    title: <span class="string">&#x27;游戏&#x27;</span></span><br><span class="line">    quote: <span class="string">&#x27;我不是沉迷于游戏，我是在修行。 ——陈思宇&#x27;</span></span><br><span class="line">    meta: <span class="literal">true</span></span><br><span class="line">    comments: <span class="literal">true</span></span><br><span class="line">    top_img: https://img.zcool.cn/community/01fca8581aee9ca84a0e282b96d047.jpg@2o.jpg</span><br><span class="line">    aside: <span class="literal">true</span></span><br><span class="line">    path: games</span><br><span class="line">    <span class="built_in">limit</span>:</span><br><span class="line">  <span class="built_in">timeout</span>: 10000 </span><br></pre></td></tr></table></figure></li>
+<li>最后依次运行<code>hexo clean</code>、 <code>hexo douban</code>、<code>hexo g</code>、 <code>hexo s</code>、 <code>hexo deploy</code>来进行部署.</li>
+</ol>
+<h3 id="创建图床"><a href="#创建图床" class="headerlink" title="创建图床"></a>创建图床</h3><p>由于相册和文章需要上传图片，这会导致网站的加载速度非常慢，所以创建一个图床用来存放图片是很有必要的。</p>
+<ol>
+<li>下载图片压缩软件<code>Caesium Image Compressor</code>和上传图片软件<code>PicGo</code>,在github创建一个仓库作为图床用来存放上传的图片。然后在新建仓库上创建token.点击右上角选择Settings -&gt; 下拉找到 Developer Settings -&gt; 下拉选择Personal access tokens 下面的Tokens (classic),点击Generate new token 创建新的token.<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://jsd.cdn.zzko.cn/gh/Jurphy/Figure-bed/img/topImg/%E5%88%9B%E5%BB%BAtoken.png" alt="创建token"></li>
+<li>打开PicGo软件，点击图床设置 -&gt;GitHub,然后设置如下内容：<br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://jsd.cdn.zzko.cn/gh/Jurphy/Figure-bed/img/topImg/%E5%9B%BE%E5%BA%8A%E8%AE%BE%E7%BD%AE.png" alt="图床设置"></li>
+<li>点击上传区就可以把压缩过的图片进行上传，上传完成后点击相册，找到需要的图片复制连接就可以使用了。</li>
+</ol>
 ]]></content>
+  </entry>
+  <entry>
+    <title>Node版本切换</title>
+    <url>/2024/04/25/%E5%89%8D%E7%AB%AF/Node/node/</url>
+    <content><![CDATA[<h4 id="可以使用-n-模块进行node版本切换"><a href="#可以使用-n-模块进行node版本切换" class="headerlink" title="可以使用 n 模块进行node版本切换"></a>可以使用 n 模块进行node版本切换</h4><ul>
+<li>全局安装 n  npm install -g n</li>
+<li>查看服务器上可用的版本 n ls-remote –all</li>
+<li>安装最新版node  n latest</li>
+<li>安装某个具体版本  n 16.18.0</li>
+<li>查看已经安装过的node版本  n ls</li>
+<li>删除14.13.1版本 n rm 14.13.1</li>
+</ul>
+<h4 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装<a href="https://nvm.uihtm.com/">nvm</a></h4>]]></content>
+      <categories>
+        <category>前端</category>
+        <category>Node</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>Node</tag>
+      </tags>
   </entry>
   <entry>
     <title>npm install XXXXX 加上-s、-d、-g和什么都不加的区别?</title>
@@ -89,13 +127,19 @@
   <entry>
     <title>TypeScript</title>
     <url>/2024/04/18/%E5%89%8D%E7%AB%AF/TS/TypeScript/</url>
-    <content><![CDATA[<h1 id="TypeScript的基本概念"><a href="#TypeScript的基本概念" class="headerlink" title="TypeScript的基本概念"></a>TypeScript的基本概念</h1><h2 id="TS是什么？"><a href="#TS是什么？" class="headerlink" title="TS是什么？"></a>TS是什么？</h2><p>1.TS，是 JavaScript 的超集(JS有的TS都有)，在js的基础上添加了类型支持。<br>2.TypeScript 属于静态类型的编程语言，JavaScript 属于动态类型的编程语言。</p>
+    <content><![CDATA[<h1 id="TypeScript的基本概念"><a href="#TypeScript的基本概念" class="headerlink" title="TypeScript的基本概念"></a>TypeScript的基本概念</h1><h2 id="TS是什么？"><a href="#TS是什么？" class="headerlink" title="TS是什么？"></a>TS是什么？</h2><ol>
+<li>TS，是 JavaScript 的超集(JS有的TS都有)，在js的基础上添加了类型支持。</li>
+<li>TypeScript 属于静态类型的编程语言，JavaScript 属于动态类型的编程语言。</li>
+</ol>
 <ul>
 <li>静态类型：编译期做类型检查</li>
 <li>动态类型：执行期做类型检查</li>
 </ul>
-<h2 id="TypeScript类型概述"><a href="#TypeScript类型概述" class="headerlink" title="TypeScript类型概述"></a>TypeScript类型概述</h2><p>可以将 TS 中的常用基础类型细分为两类：<br>1.JS 已有类型</p>
-<p><code>原始类型</code>，简单类型（number&#x2F;string&#x2F;boolean&#x2F;null&#x2F;undefined）<br><code>复杂数据类型</code>（数组，对象，函数等）<br>2.TS 新增类型</p>
+<h2 id="TypeScript类型概述"><a href="#TypeScript类型概述" class="headerlink" title="TypeScript类型概述"></a>TypeScript类型概述</h2><p>可以将 TS 中的常用基础类型细分为两类：</p>
+<ol>
+<li>JS 已有类型</li>
+</ol>
+<p><code>原始类型</code>，简单类型（number&#x2F;string&#x2F;boolean&#x2F;null&#x2F;undefined）<br><code>复杂数据类型</code>（数组，对象，函数等）<br>2. TS 新增类型</p>
 <p><code>联合类型</code><br><code>自定义类型（类型别名）</code><br><code>接口</code><br><code>元组</code><br><code>字面量类型</code><br><code>枚举</code><br><code>void</code></p>
 <h3 id="原始数据类型"><a href="#原始数据类型" class="headerlink" title="原始数据类型"></a>原始数据类型</h3><p>原始类型：number&#x2F;string&#x2F;boolean&#x2F;null&#x2F;undefinrd</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">let</span> myAge: number = 25</span><br><span class="line"><span class="built_in">let</span> myName: string = <span class="string">&#x27;Jurphy&#x27;</span></span><br><span class="line"><span class="built_in">let</span> isMan: boolean = <span class="literal">false</span></span><br></pre></td></tr></table></figure>
@@ -119,12 +163,18 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">type</span> Config = &#123;</span><br><span class="line">  url: string</span><br><span class="line">  method?: string</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> myAxios(config: Config) &#123;</span><br><span class="line">  console.log(config)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="接口类型"><a href="#接口类型" class="headerlink" title="接口类型"></a>接口类型</h3><p>当一个对象类型被多次使用时，一般会使用接口（interface）来描述对象的类型，达到复用的目的(推荐以 <code>I</code> 开头)</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface IPerson &#123;</span><br><span class="line">  name: string</span><br><span class="line">  age: number</span><br><span class="line">  sayHi(): void</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> person: IPerson = &#123;</span><br><span class="line">  name: <span class="string">&#x27;jack&#x27;</span>,</span><br><span class="line">  age: 19,</span><br><span class="line">  <span class="function"><span class="title">sayHi</span></span>() &#123;&#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<h4 id="interface-vs-type"><a href="#interface-vs-type" class="headerlink" title="interface vs type"></a>interface vs type</h4><p> interface（接口）和 type（类型别名）的对比：<br>1.相同点：都可以给对象指定类型<br>2.不同点:</p>
+<h4 id="interface-vs-type"><a href="#interface-vs-type" class="headerlink" title="interface vs type"></a>interface vs type</h4><p> interface（接口）和 type（类型别名）的对比：</p>
+<ol>
+<li>相同点：都可以给对象指定类型</li>
+<li>不同点:</li>
+</ol>
 <ul>
 <li>接口，只能为对象指定类型</li>
 <li>类型别名，不仅可以为对象指定类型，实际上可以为任意类型指定别名</li>
 </ul>
-<p>3.推荐：能使用 type 就是用 <code>type</code></p>
+<ol start="3">
+<li>推荐：能使用 type 就是用 <code>type</code></li>
+</ol>
 <h4 id="接口继承"><a href="#接口继承" class="headerlink" title="接口继承"></a>接口继承</h4><p>如果两个接口之间有相同的属性或方法，可以将公共的属性或方法抽离出来，通过继承来实现复用。</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface Point2D &#123; x: number; y: number &#125;</span><br><span class="line">// 继承 Point2D</span><br><span class="line">interface Point3D extends Point2D &#123;</span><br><span class="line">  z: number</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 <h3 id="元组类型"><a href="#元组类型" class="headerlink" title="元组类型"></a>元组类型</h3><p>元组类型是另一种类型的数组，它确切地知道包含多少个元素，以及特定索引对应的类型,(场景：在地图中，使用经纬度坐标来标记位置信息)</p>
@@ -146,16 +196,15 @@
 <h3 id="类型断言"><a href="#类型断言" class="headerlink" title="类型断言"></a>类型断言</h3><p>有时候你会比 TS 更加明确一个值的类型，此时，可以使用类型断言来指定更具体的类型</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 使用 as 关键字实现类型断言</span></span><br><span class="line"><span class="comment"># 关键字 as 后面的类型是一个更加具体的类型（HTMLAnchorElement 是 HTMLElement 的子类型）</span></span><br><span class="line">const aLink = document.getElementById(<span class="string">&#x27;link&#x27;</span>) as HTMLAnchorElement</span><br></pre></td></tr></table></figure>
 <h2 id="TypeScript泛型"><a href="#TypeScript泛型" class="headerlink" title="TypeScript泛型"></a>TypeScript泛型</h2><p>泛型是可以在保证类型安全前提下，让函数等与多种类型一起工作，从而实现复用，常用于：函数、接口、class 中</p>
-<h3 id="泛型函数"><a href="#泛型函数" class="headerlink" title="泛型函数"></a>泛型函数</h3><p>1.定义泛型函数</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 类型变量 Type，是一种特殊类型的变量，它处理类型而不是值</span></span><br><span class="line"><span class="keyword">function</span> <span class="built_in">id</span>&lt;Type&gt;(value: Type): Type &#123; <span class="built_in">return</span> value &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="built_in">id</span>&lt;T&gt;(value: T): T &#123; <span class="built_in">return</span> value &#125;</span><br></pre></td></tr></table></figure>
-<p>2.调用泛型函数</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">const num = <span class="built_in">id</span>&lt;number&gt;(10)</span><br><span class="line">const str = <span class="built_in">id</span>&lt;string&gt;(<span class="string">&#x27;a&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<p>2.简化泛型函数调用</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 类型参数推断的机制</span></span><br><span class="line">const num = <span class="built_in">id</span>(10)</span><br><span class="line">const str = <span class="built_in">id</span>(<span class="string">&#x27;a&#x27;</span>)</span><br></pre></td></tr></table></figure>
-<h4 id="泛型约束"><a href="#泛型约束" class="headerlink" title="泛型约束"></a>泛型约束</h4><p>1.指定更加具体的类型</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="built_in">id</span>&lt;Type&gt;(value: Type[]): Type[] &#123;</span><br><span class="line">  console.log(value.length)</span><br><span class="line">  <span class="built_in">return</span> value</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-<p>2.添加约束</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建一个接口</span></span><br><span class="line">interface ILength &#123; length: number &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#  Type extends ILength 添加泛型约束</span></span><br><span class="line"><span class="comment">#  解释：表示传入的 类型 必须满足 ILength 接口的要求才行，也就是得有一个 number 类型的 length 属性</span></span><br><span class="line"><span class="keyword">function</span> <span class="built_in">id</span>&lt;Type extends ILength&gt;(value: Type): Type &#123;</span><br><span class="line">  console.log(value.length)</span><br><span class="line">  <span class="built_in">return</span> value</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="泛型函数"><a href="#泛型函数" class="headerlink" title="泛型函数"></a>泛型函数</h3><ol>
+<li>定义泛型函数<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 类型变量 Type，是一种特殊类型的变量，它处理类型而不是值</span></span><br><span class="line"><span class="keyword">function</span> <span class="built_in">id</span>&lt;Type&gt;(value: Type): Type &#123; <span class="built_in">return</span> value &#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">function</span> <span class="built_in">id</span>&lt;T&gt;(value: T): T &#123; <span class="built_in">return</span> value &#125;</span><br></pre></td></tr></table></figure></li>
+<li>调用泛型函数<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">const num = <span class="built_in">id</span>&lt;number&gt;(10)</span><br><span class="line">const str = <span class="built_in">id</span>&lt;string&gt;(<span class="string">&#x27;a&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+<li>简化泛型函数调用<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 类型参数推断的机制</span></span><br><span class="line">const num = <span class="built_in">id</span>(10)</span><br><span class="line">const str = <span class="built_in">id</span>(<span class="string">&#x27;a&#x27;</span>)</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h4 id="泛型约束"><a href="#泛型约束" class="headerlink" title="泛型约束"></a>泛型约束</h4><ol>
+<li>指定更加具体的类型<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="keyword">function</span> <span class="built_in">id</span>&lt;Type&gt;(value: Type[]): Type[] &#123;</span><br><span class="line">  console.log(value.length)</span><br><span class="line">  <span class="built_in">return</span> value</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>添加约束<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="comment"># 创建一个接口</span></span><br><span class="line">interface ILength &#123; length: number &#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">#  Type extends ILength 添加泛型约束</span></span><br><span class="line"><span class="comment">#  解释：表示传入的 类型 必须满足 ILength 接口的要求才行，也就是得有一个 number 类型的 length 属性</span></span><br><span class="line"><span class="keyword">function</span> <span class="built_in">id</span>&lt;Type extends ILength&gt;(value: Type): Type &#123;</span><br><span class="line">  console.log(value.length)</span><br><span class="line">  <span class="built_in">return</span> value</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
 <h3 id="泛型接口"><a href="#泛型接口" class="headerlink" title="泛型接口"></a>泛型接口</h3><p>接口也可以配合泛型来使用，以增加其灵活性，增强其复用性</p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">interface IdFunc&lt;Type&gt; &#123;</span><br><span class="line">  <span class="built_in">id</span>: (value: Type) =&gt; Type</span><br><span class="line">  ids: () =&gt; Type[]</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="built_in">let</span> obj: IdFunc&lt;number&gt; = &#123;</span><br><span class="line">  <span class="built_in">id</span>(value) &#123; <span class="built_in">return</span> value &#125;,</span><br><span class="line">  <span class="function"><span class="title">ids</span></span>() &#123; <span class="built_in">return</span> [1, 3, 5] &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 ]]></content>
@@ -166,6 +215,232 @@
       <tags>
         <tag>前端</tag>
         <tag>TypeScript</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vite</title>
+    <url>/2024/04/22/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/Vite/</url>
+    <content><![CDATA[<h1 id="Vite的介绍"><a href="#Vite的介绍" class="headerlink" title="Vite的介绍"></a>Vite的介绍</h1><h2 id="Vite的优势"><a href="#Vite的优势" class="headerlink" title="Vite的优势"></a>Vite的优势</h2><p><a href="https://vitejs.cn/">Vite官方文档</a></p>
+<ol>
+<li><code>无需打包</code>，使用原生 ESM 文件,极速的服务启动</li>
+<li>轻量快速的<code>热重载</code>，始终极快的模块热重载（HMR）</li>
+<li>丰富的功能，对 TypeScript、JSX、CSS 等支持<code>开箱即用</code></li>
+</ol>
+<h2 id="Vite-的基本使用"><a href="#Vite-的基本使用" class="headerlink" title="Vite 的基本使用"></a>Vite 的基本使用</h2><ol>
+<li>创建普通vue项目<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn creat vite 项目名 --template vue</span><br></pre></td></tr></table></figure></li>
+<li>创建基于TS模板的项目<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn creat vite 项目名 --template vue-ts</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>前端构建工具</category>
+        <category>Vite</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>前端构建工具</tag>
+        <tag>Vite</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Webpack</title>
+    <url>/2024/04/25/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/Webpack/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>前端</category>
+        <category>前端构建工具</category>
+        <category>Webpack</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>前端构建工具</tag>
+        <tag>Webpack</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vue3</title>
+    <url>/2024/04/22/%E5%89%8D%E7%AB%AF/Vue/Vue3/</url>
+    <content><![CDATA[<h1 id="Vue3的介绍"><a href="#Vue3的介绍" class="headerlink" title="Vue3的介绍"></a>Vue3的介绍</h1><h2 id="Vue3的特性"><a href="#Vue3的特性" class="headerlink" title="Vue3的特性"></a>Vue3的特性</h2><h3 id="Vue3的新特性"><a href="#Vue3的新特性" class="headerlink" title="Vue3的新特性"></a>Vue3的新特性</h3><ol>
+<li><code>数据响应式原理</code>重新实现：ES6 <code>proxy</code> 替代了 ES5 的 <code>Object.defineProperty</code></li>
+<li><code>虚拟DOM</code> - 新算法:</li>
+<li>提供了<code>composition api</code>, 可以更好的逻辑复用</li>
+<li>模板可以有<code>多个根元素</code></li>
+<li>源码用 typescript 重写, 有更好的<code>类型推导</code></li>
+</ol>
+<h3 id="composition-API-vs-options-API"><a href="#composition-API-vs-options-API" class="headerlink" title="composition API vs options API"></a>composition API vs options API</h3><ol>
+<li>vue2 采用的就是 <code>optionsAPI</code></li>
+</ol>
+<ul>
+<li><code>优点</code>:易于学习和使用, 每个代码有着明确的位置 (例如: 数据放 data 中, 方法放 methods中)</li>
+<li><code>缺点</code>:相似的逻辑, 不容易复用</li>
+</ul>
+<ol start="2">
+<li>vue3 新增的就是 <code>compositionAPI</code></li>
+</ol>
+<ul>
+<li>compositionAPI 是基于 <code>逻辑功能</code> 组织代码的, 一个功能 api 相关放到一起</li>
+<li>大大的提升了 <code>代码可读性</code> 和 <code>可维护性</code></li>
+<li>vue3 推荐使用 composition API, 也保留了options API</li>
+</ul>
+<h3 id="setup-函数"><a href="#setup-函数" class="headerlink" title="setup 函数"></a>setup 函数</h3><p>composition api的使用, 需要配置一个setup 函数</p>
+<ol>
+<li>setup函数是组件中compositionAPI的<code>起点</code></li>
+<li>从生命周期角度来看, setup 会在 beforeCreate 钩子函数之<code>前</code>执行</li>
+<li><code>setup 中不能使用 this</code>, this 指向 undefined</li>
+<li>在模版中需要使用的数据和函数，需要在 setup <code>返回</code></li>
+</ol>
+<h3 id="reactive-函数"><a href="#reactive-函数" class="headerlink" title="reactive 函数"></a>reactive 函数</h3><p><code>作用</code>: 传入一个<code>复杂数据类型</code>，将复杂类型数据, 转换成响应式数据 （返回该对象的响应式代理）<br><code>注意</code>：直接使用reactive处理基本类型则会报出警告，因为vue3是基于proxy代理的，proxy是对象的特性，通常是用来定义响应式 <code>对象数据</code></p>
+<h3 id="ref-函数"><a href="#ref-函数" class="headerlink" title="ref 函数"></a>ref 函数</h3><p><code>作用</code>: 对传入的数据（<code>一般简单数据类型</code>），包裹一层对象, 转换成响应式。</p>
+<ol>
+<li>ref 函数接收一个的值, 返回一个<code>ref 响应式对象</code>, 有唯一的属性 value</li>
+<li>在 setup 函数中, 通过 ref 对象的 <code>value 属性</code>, 可以访问到值</li>
+<li>在<code>模板中, ref 属性会自动解套</code>, 不需要额外的 .value</li>
+<li>ref函数也支持传入<code>复杂类型</code>，传入复杂类型，也会做响应式处理(明确的对象，明确的属性，用reactive，其他用 ref)</li>
+</ol>
+<h3 id="toRefs-函数"><a href="#toRefs-函数" class="headerlink" title="toRefs 函数"></a>toRefs 函数</h3><p>使用场景: 如果对一个响应数据, 进行解构 或者 展开, 会丢失他的响应式特性,对一个 响应式对象 的所有内部属性, 都做响应式处理, 保证展开或者解构出的数据也是响应式的</p>
+<p>使用 toRefs 可以保证该对象展开的每个属性都是响应式的</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;&#123;&#123; money &#125;&#125;&lt;/div&gt;</span><br><span class="line">  &lt;div&gt;&#123;&#123; car &#125;&#125;&lt;/div&gt;</span><br><span class="line">  &lt;div&gt;&#123;&#123; name &#125;&#125;&lt;/div&gt;</span><br><span class="line">  &lt;button @click=<span class="string">&quot;money++&quot;</span>&gt;改值&lt;/button&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; reactive, ref, toRefs &#125; from <span class="string">&#x27;vue&#x27;</span></span><br><span class="line">const user = ref(&#123;</span><br><span class="line">  name: <span class="string">&#x27;zs&#x27;</span>,</span><br><span class="line">  age: 18,</span><br><span class="line">&#125;)</span><br><span class="line">const &#123; name, age &#125; = toRefs(user.value)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="计算属性computed函数"><a href="#计算属性computed函数" class="headerlink" title="计算属性computed函数"></a>计算属性computed函数</h3><p>computed函数调用时, 要接收一个处理函数, 处理函数中, 需要返回计算属性的值</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;我今年的年纪 &lt;input <span class="built_in">type</span>=<span class="string">&quot;text&quot;</span> v-model=<span class="string">&quot;age&quot;</span> /&gt;&lt;/div&gt;</span><br><span class="line">  &lt;div&gt;我明年的年龄 &#123;&#123; nextAge &#125;&#125;&lt;/div&gt;</span><br><span class="line">  &lt;div&gt;我后年的年龄 &lt;input <span class="built_in">type</span>=<span class="string">&quot;text&quot;</span> v-model=<span class="string">&quot;nextAge2&quot;</span> /&gt;&lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"></span><br><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; computed, ref &#125; from <span class="string">&#x27;vue&#x27;</span></span><br><span class="line">const age = ref(10)</span><br><span class="line">// 不带<span class="built_in">set</span>的计算属性</span><br><span class="line">const nextAge = computed(() =&gt; &#123;</span><br><span class="line">  return +age.value + <span class="number">1</span></span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">// 带set的计算属性</span><br><span class="line">const nextAge2 = computed(&#123;</span><br><span class="line">  get() &#123;</span><br><span class="line">    return +age.value + <span class="number">2</span></span><br><span class="line">  &#125;,</span><br><span class="line">  set(value) &#123;</span><br><span class="line">    age.value = value - <span class="number">2</span></span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h3 id="侦听器watch函数"><a href="#侦听器watch函数" class="headerlink" title="侦听器watch函数"></a>侦听器watch函数</h3><p>watch监视, 接收三个参数</p>
+<ul>
+<li>参数1: 监视的数据源</li>
+<li>参数2: 回调函数</li>
+<li>参数3: 额外的配置</li>
+</ul>
+<ol>
+<li>监听单个ref<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">const money = ref(100)</span><br><span class="line">watch(money, (value, oldValue) =&gt; &#123;</span><br><span class="line">  console.log(value)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>监听多个ref,可以使用数组<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">const money = ref(100)</span><br><span class="line">const count = ref(0)</span><br><span class="line">watch([money, count], ([newMoney, newCount], [oldMoney, oldCount]) =&gt; &#123;</span><br><span class="line">  console.log(value)</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>监听ref复杂数据<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">const user = ref(&#123;</span><br><span class="line">  name: <span class="string">&#x27;zs&#x27;</span>,</span><br><span class="line">  age: 18,</span><br><span class="line">&#125;)</span><br><span class="line">watch(</span><br><span class="line">  user,</span><br><span class="line">  (value) =&gt; &#123;</span><br><span class="line">    console.log(<span class="string">&#x27;user变化了&#x27;</span>, value)</span><br><span class="line">  &#125;,</span><br><span class="line">  &#123;</span><br><span class="line">    // 深度监听，，，当ref的值是一个复杂数据类型，需要深度监听</span><br><span class="line">    deep: <span class="literal">true</span>,</span><br><span class="line">    immediate: <span class="literal">true</span></span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
+<li>监听对象的某个属性的变化<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">const user = ref(&#123;</span><br><span class="line">  name: <span class="string">&#x27;zs&#x27;</span>,</span><br><span class="line">  age: 18,</span><br><span class="line">&#125;)</span><br><span class="line">watch(</span><br><span class="line">  () =&gt; user.value.name,</span><br><span class="line">  (value) =&gt; &#123;</span><br><span class="line">    console.log(value)</span><br><span class="line">  &#125;</span><br><span class="line">)</span><br></pre></td></tr></table></figure></li>
+<li><font color = red>利用第三个参数清除副作用</font></li>
+</ol>
+<h3 id="钩子函数的使用"><a href="#钩子函数的使用" class="headerlink" title="钩子函数的使用"></a>钩子函数的使用</h3><p> vue3 中的生命周期函数, 需要在 setup 中调用</p>
+<table>
+<thead>
+<tr>
+<th>vue2生命周期</th>
+<th>vue3生命周期</th>
+<th>执行时间说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>bedoreCreate</td>
+<td>setup</td>
+<td>组件创建前执行</td>
+</tr>
+<tr>
+<td>created</td>
+<td>setup</td>
+<td>组件创建后执行</td>
+</tr>
+<tr>
+<td>beforeMount</td>
+<td>onBeforeMount</td>
+<td>组件挂载到节点之前执行</td>
+</tr>
+<tr>
+<td>mounted</td>
+<td>onMounted</td>
+<td>组件挂载完成后执行</td>
+</tr>
+<tr>
+<td>beforeUpdate</td>
+<td>onBeforeUpdate</td>
+<td>组件更新之前执行</td>
+</tr>
+<tr>
+<td>updated</td>
+<td>onUpdated</td>
+<td>组件更新完成后执行</td>
+</tr>
+<tr>
+<td>beforeDestroy</td>
+<td>onBeforeUnmount</td>
+<td>组件卸载之前执行</td>
+</tr>
+<tr>
+<td>destroyed</td>
+<td>onUnMounted</td>
+<td>组件卸载完成后执行</td>
+</tr>
+<tr>
+<td>errorCaptured</td>
+<td>onErrorCaptured</td>
+<td>当捕捉一个来自孙子组件异常时激活钩子函数</td>
+</tr>
+</tbody></table>
+<h2 id="组件通讯"><a href="#组件通讯" class="headerlink" title="组件通讯"></a>组件通讯</h2><h3 id="组件通讯-父传子"><a href="#组件通讯-父传子" class="headerlink" title="组件通讯-父传子"></a>组件通讯-父传子</h3><p>父组件将自己的数据传递个子组件（子组件通过<code>defineProps</code>进行接收）</p>
+<ol>
+<li>父组件<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; ref &#125; from <span class="string">&#x27;vue&#x27;</span></span><br><span class="line">// 在setup语法中，组件导入之后就能够直接使用，不需要使用components进行局部注册</span><br><span class="line">import Son from <span class="string">&#x27;./components/Son.vue&#x27;</span></span><br><span class="line"></span><br><span class="line">const students = ref(100)</span><br><span class="line">const music = ref(<span class="string">&#x27;稻香&#x27;</span>)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;我是父组件&lt;/h1&gt;</span><br><span class="line">    &lt;div&gt;学生人数：&#123;&#123; students &#125;&#125;&lt;/div&gt;</span><br><span class="line">    &lt;div&gt;音乐：&#123;&#123; music &#125;&#125;&lt;/div&gt;</span><br><span class="line">    &lt;hr /&gt;</span><br><span class="line">    &lt;Son :students=<span class="string">&quot;students&quot;</span> :music=<span class="string">&quot;music&quot;</span>&gt;&lt;/Son&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure></li>
+<li>子组件<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; computed &#125; from <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line">// defineProps: 接收父组件传递的数据</span><br><span class="line">const props = defineProps(&#123;</span><br><span class="line">  students: Number,</span><br><span class="line">  music: String,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">const Newstudents = computed(() =&gt; &#123;</span><br><span class="line">  return props.students + <span class="number">10</span></span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h3&gt;我是子组件&lt;/h3&gt;</span><br><span class="line">    &lt;div&gt;&#123;&#123; Newstudents &#125;&#125; --- &#123;&#123; music &#125;&#125;&lt;/div&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="组件通讯-子传父"><a href="#组件通讯-子传父" class="headerlink" title="组件通讯-子传父"></a>组件通讯-子传父</h3><p>子组件通过emit触发事件，并且传递数据，父组件通过自定义事件的方式给子组件注册事件</p>
+<ol>
+<li>子组件<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">defineProps(&#123;</span><br><span class="line">students: Number,</span><br><span class="line">  music: String,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line">const emit = defineEmits([<span class="string">&#x27;changeMusic&#x27;</span>])</span><br><span class="line"></span><br><span class="line">const change = () =&gt; &#123;</span><br><span class="line">  emit(<span class="string">&#x27;changeMusic&#x27;</span>, <span class="string">&#x27;小美满&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+<li>父组件<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; ref &#125; from <span class="string">&#x27;vue&#x27;</span></span><br><span class="line">// 在setup语法中，组件导入之后就能够直接使用，不需要使用components进行局部注册</span><br><span class="line">import Son from <span class="string">&#x27;./components/Son.vue&#x27;</span></span><br><span class="line"></span><br><span class="line">const students = ref(10)</span><br><span class="line">const music = ref(<span class="string">&#x27;稻香&#x27;</span>)</span><br><span class="line">const changeMusic = (val) =&gt; &#123;</span><br><span class="line">  music.value = val</span><br><span class="line">&#125;</span><br><span class="line">&lt;/script&gt;</span><br><span class="line">&lt;Son :music=<span class="string">&quot;music&quot;</span> :students=<span class="string">&quot;students&quot;</span> @changeMusic=<span class="string">&quot;changeMusic&quot;</span>&gt;&lt;/Son&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="依赖注入-provide-和-inject"><a href="#依赖注入-provide-和-inject" class="headerlink" title="依赖注入 - provide 和 inject"></a>依赖注入 - provide 和 inject</h3><p>依赖注入, 可以非常方便的实现 <code>跨层级</code>的组件通信</p>
+<ol>
+<li>父组件利用 provide 提供数据<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; provide, ref &#125; from <span class="string">&#x27;vue&#x27;</span></span><br><span class="line">import Son from <span class="string">&#x27;./components/Son.vue&#x27;</span></span><br><span class="line">const money = ref(20)</span><br><span class="line">provide(<span class="string">&#x27;money&#x27;</span>, money)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h1&gt;我是父组件&lt;/h1&gt;</span><br><span class="line">    &lt;div&gt;金钱：&#123;&#123; money &#125;&#125;&lt;/div&gt;</span><br><span class="line">    &lt;hr /&gt;</span><br><span class="line">    &lt;Son&gt;&lt;/Son&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure></li>
+<li>子组件 (子孙后代, 都可以拿到这个数据)<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; inject &#125; from <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line">const money = inject(<span class="string">&#x27;money&#x27;</span>)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;div&gt;</span><br><span class="line">    &lt;h3&gt;我是子组件--&#123;&#123; money &#125;&#125;&lt;/h3&gt;</span><br><span class="line">    &lt;button&gt;修改数据&lt;/button&gt;</span><br><span class="line">  &lt;/div&gt;</span><br><span class="line">&lt;/template&gt;</span><br></pre></td></tr></table></figure></li>
+<li>还可以使用子组件去接收一个方法来修改父组件的数据</li>
+</ol>
+<h3 id="模板中-ref-的使用"><a href="#模板中-ref-的使用" class="headerlink" title="模板中 ref 的使用"></a>模板中 ref 的使用</h3><ol>
+<li>联想之前的 ref 和 $refs， 获取模板的元素（dom元素，组件）</li>
+<li>ref操作组件<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; ref &#125; from <span class="string">&#x27;vue&#x27;</span></span><br><span class="line"></span><br><span class="line">const count = ref(0)</span><br><span class="line">const validate = () =&gt; &#123;</span><br><span class="line">  console.log(<span class="string">&#x27;表单校验方法&#x27;</span>)</span><br><span class="line">&#125;</span><br><span class="line">// 暴露属性给外部组件使用</span><br><span class="line">defineExpose(&#123;</span><br><span class="line">  count,</span><br><span class="line">  validate,</span><br><span class="line">&#125;)</span><br><span class="line">&lt;/script&gt;</span><br><span class="line"></span><br><span class="line">&lt;template&gt;</span><br><span class="line">  &lt;h3&gt;我是Form组件&lt;/h3&gt;</span><br><span class="line">&lt;/template&gt;</span><br><span class="line"><span class="comment"># 父组件想要调用子组件的方法必须子组件通过defineExpose主动暴露出来才可以访问的到</span></span><br></pre></td></tr></table></figure></li>
+</ol>
+<h3 id="vue3中废弃了过滤器"><a href="#vue3中废弃了过滤器" class="headerlink" title="vue3中废弃了过滤器"></a>vue3中废弃了过滤器</h3><p>vue3.0中不能使用过滤器，直接使用函数进行替代</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>vue3</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>Vue</tag>
+        <tag>Vue3</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Pinia</title>
+    <url>/2024/04/25/%E5%89%8D%E7%AB%AF/%E7%8A%B6%E6%80%81%E7%AE%A1%E7%90%86/Pinia/</url>
+    <content><![CDATA[<h2 id="Pinia-的基本介绍"><a href="#Pinia-的基本介绍" class="headerlink" title="Pinia 的基本介绍"></a>Pinia 的基本介绍</h2><p><a href="https://pinia.vuejs.org/">Pinia</a> 是 Vue.js 的轻量级状态管理库<br>中文站点：<a href="https://pinia.web3doc.top/introduction.html">https://pinia.web3doc.top/introduction.html</a></p>
+<h3 id="Pinia的优点"><a href="#Pinia的优点" class="headerlink" title="Pinia的优点"></a>Pinia的优点</h3><p>相比于VueX4,有以下优点：</p>
+<ol>
+<li>对于vue3的兼容性更好</li>
+<li>具备完善的类型推荐</li>
+<li>Pinia 的 API 设计非常接近 Vuex 5 的提案</li>
+</ol>
+<h3 id="Pinia的核心概念"><a href="#Pinia的核心概念" class="headerlink" title="Pinia的核心概念"></a>Pinia的核心概念</h3><ol>
+<li>state:状态</li>
+<li>actions:修改状态（包括同步和异步，pinia中没有mutations）</li>
+<li>getters:计算属性</li>
+</ol>
+<h2 id="基本使用"><a href="#基本使用" class="headerlink" title="基本使用"></a>基本使用</h2><h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn add pinia</span><br><span class="line"><span class="comment"># or</span></span><br><span class="line">npm i pinia</span><br></pre></td></tr></table></figure>
+<h3 id="在main-js中挂载pinia"><a href="#在main-js中挂载pinia" class="headerlink" title="在main.js中挂载pinia"></a>在main.js中挂载pinia</h3><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">import &#123; createApp &#125; from <span class="string">&#x27;vue&#x27;</span></span><br><span class="line">import App from <span class="string">&#x27;./App.vue&#x27;</span></span><br><span class="line"></span><br><span class="line">import &#123; createPinia &#125; from <span class="string">&#x27;pinia&#x27;</span></span><br><span class="line">const pinia = createPinia()</span><br><span class="line"></span><br><span class="line">createApp(App).use(pinia).mount(<span class="string">&#x27;#app&#x27;</span>)</span><br></pre></td></tr></table></figure>
+<h3 id="storeToRefs的使用"><a href="#storeToRefs的使用" class="headerlink" title="storeToRefs的使用"></a>storeToRefs的使用</h3><p>如果直接从pinia中解构数据，会丢失响应式， 使用storeToRefs可以保证解构出来的数据也是响应式的</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; storeToRefs &#125; from <span class="string">&#x27;pinia&#x27;</span></span><br><span class="line">import useCounterStore from <span class="string">&#x27;./store/counter&#x27;</span></span><br><span class="line"></span><br><span class="line">const counter = useCounterStore()</span><br><span class="line">// 如果直接从pinia中解构数据，会丢失响应式</span><br><span class="line">const &#123; count, double &#125; = counter</span><br><span class="line"></span><br><span class="line">// 使用storeToRefs可以保证解构出来的数据也是响应式的</span><br><span class="line">const &#123; count, double &#125; = storeToRefs(counter)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure>
+<h2 id="pinia模块化"><a href="#pinia模块化" class="headerlink" title="pinia模块化"></a>pinia模块化</h2><p>在复杂的项目中，一般一个模块对应一个store,最后在根store中进行调整</p>
+<ol>
+<li>新建store&#x2F;user.js文件<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">import &#123; defineStore &#125; from <span class="string">&#x27;pinia&#x27;</span></span><br><span class="line"></span><br><span class="line">const useUserStore = defineStore(<span class="string">&#x27;user&#x27;</span>, &#123;</span><br><span class="line">  state: () =&gt; &#123;</span><br><span class="line">    <span class="built_in">return</span> &#123;</span><br><span class="line">      name: <span class="string">&#x27;zs&#x27;</span>,</span><br><span class="line">      age: 100,</span><br><span class="line">    &#125;</span><br><span class="line">  &#125;,</span><br><span class="line">&#125;)</span><br><span class="line"></span><br><span class="line"><span class="built_in">export</span> default useUserStore</span><br></pre></td></tr></table></figure></li>
+<li>新建store&#x2F;index.js<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">import useUserStore from <span class="string">&#x27;./user&#x27;</span></span><br><span class="line">import useCounterStore from <span class="string">&#x27;./counter&#x27;</span></span><br><span class="line"></span><br><span class="line">// 统一导出useStore方法</span><br><span class="line"><span class="built_in">export</span> default <span class="keyword">function</span> <span class="function"><span class="title">useStore</span></span>() &#123;</span><br><span class="line">  <span class="built_in">return</span> &#123;</span><br><span class="line">    user: useUserStore(),</span><br><span class="line">    counter: useCounterStore(),</span><br><span class="line">  &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+<li>在组件中使用<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">&lt;script setup&gt;</span><br><span class="line">import &#123; storeToRefs &#125; from <span class="string">&#x27;pinia&#x27;</span></span><br><span class="line">import useStore from <span class="string">&#x27;./store&#x27;</span></span><br><span class="line">const &#123; counter &#125; = useStore()</span><br><span class="line"></span><br><span class="line">// 使用storeToRefs可以保证解构出来的数据也是响应式的</span><br><span class="line">const &#123; count, double &#125; = storeToRefs(counter)</span><br><span class="line">&lt;/script&gt;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="持久化"><a href="#持久化" class="headerlink" title="持久化"></a>持久化</h2><ol>
+<li>订阅store中数据的变化<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">const &#123; todos &#125; = useStore()</span><br><span class="line">todos.<span class="variable">$subscribe</span>(() =&gt; &#123;</span><br><span class="line">  localStorage.setItem(&#x27;todos&#x27;, JSON.stringify(todos.list))</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+<li>获取数据时从本地缓存中获取<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">state: () =&gt; (&#123;</span><br><span class="line">  list: JSON.parse(localStorage.getItem(<span class="string">&#x27;todos&#x27;</span>)) || [],</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>状态管理</category>
+        <category>Pinia</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>状态管理</tag>
+        <tag>Pinia</tag>
       </tags>
   </entry>
 </search>
