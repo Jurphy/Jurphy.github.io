@@ -98,7 +98,20 @@
 <li>查看已经安装过的node版本  n ls</li>
 <li>删除14.13.1版本 n rm 14.13.1</li>
 </ul>
-<h4 id="安装nvm"><a href="#安装nvm" class="headerlink" title="安装nvm"></a>安装<a href="https://nvm.uihtm.com/">nvm</a></h4>]]></content>
+<h4 id="安装nvm只适用于-macOS-和-Linux-用户的项目-windows用户安装nvm-windows"><a href="#安装nvm只适用于-macOS-和-Linux-用户的项目-windows用户安装nvm-windows" class="headerlink" title="安装nvm只适用于 macOS 和 Linux 用户的项目,windows用户安装nvm-windows"></a>安装<a href="https://nvm.uihtm.com/">nvm</a>只适用于 macOS 和 Linux 用户的项目,<code>windows</code>用户安装<a href="https://github.com/coreybutler/nvm-windows/releases">nvm-windows</a></h4><ul>
+<li>nvm install latest 安装最新版本node.js</li>
+<li>nvm use 版本号 使用某一具体版本，例如 ：- nvm use 14.3.0</li>
+<li>nvm list 列出当前已安装的所有版本</li>
+<li>nvm ls 列出当前已安装的所有版本</li>
+<li>nvm uninstall 版本号 卸载某一具体版本，例如：- nvm use 14.3.0</li>
+<li>nvm ls-remote Mac版本中,列出全部可以安装的node版本</li>
+<li>nvm ls available windows版本,列出全部可以安装的node版本</li>
+<li>nvm current 显示当前的版本</li>
+<li>nvm alias 给不同的版本号添加别名</li>
+<li>nvm unalias 删除已定义的别名</li>
+<li>nvm reinstall-packages 在当前版本node环境下，重新全局安装指定版本号的npm包</li>
+</ul>
+]]></content>
       <categories>
         <category>前端</category>
         <category>Node</category>
@@ -215,46 +228,6 @@
       <tags>
         <tag>前端</tag>
         <tag>TypeScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Vite</title>
-    <url>/2024/04/22/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/Vite/</url>
-    <content><![CDATA[<h1 id="Vite的介绍"><a href="#Vite的介绍" class="headerlink" title="Vite的介绍"></a>Vite的介绍</h1><h2 id="Vite的优势"><a href="#Vite的优势" class="headerlink" title="Vite的优势"></a>Vite的优势</h2><p><a href="https://vitejs.cn/">Vite官方文档</a></p>
-<ol>
-<li><code>无需打包</code>，使用原生 ESM 文件,极速的服务启动</li>
-<li>轻量快速的<code>热重载</code>，始终极快的模块热重载（HMR）</li>
-<li>丰富的功能，对 TypeScript、JSX、CSS 等支持<code>开箱即用</code></li>
-</ol>
-<h2 id="Vite-的基本使用"><a href="#Vite-的基本使用" class="headerlink" title="Vite 的基本使用"></a>Vite 的基本使用</h2><ol>
-<li>创建普通vue项目<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn creat vite 项目名 --template vue</span><br></pre></td></tr></table></figure></li>
-<li>创建基于TS模板的项目<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn creat vite 项目名 --template vue-ts</span><br></pre></td></tr></table></figure></li>
-</ol>
-]]></content>
-      <categories>
-        <category>前端</category>
-        <category>前端构建工具</category>
-        <category>Vite</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>前端构建工具</tag>
-        <tag>Vite</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Webpack</title>
-    <url>/2024/04/25/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/Webpack/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>前端</category>
-        <category>前端构建工具</category>
-        <category>Webpack</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>前端构建工具</tag>
-        <tag>Webpack</tag>
       </tags>
   </entry>
   <entry>
@@ -400,6 +373,46 @@
         <tag>前端</tag>
         <tag>Vue</tag>
         <tag>Vue3</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Vite</title>
+    <url>/2024/04/22/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/Vite/</url>
+    <content><![CDATA[<h1 id="Vite的介绍"><a href="#Vite的介绍" class="headerlink" title="Vite的介绍"></a>Vite的介绍</h1><h2 id="Vite的优势"><a href="#Vite的优势" class="headerlink" title="Vite的优势"></a>Vite的优势</h2><p><a href="https://vitejs.cn/">Vite官方文档</a></p>
+<ol>
+<li><code>无需打包</code>，使用原生 ESM 文件,极速的服务启动</li>
+<li>轻量快速的<code>热重载</code>，始终极快的模块热重载（HMR）</li>
+<li>丰富的功能，对 TypeScript、JSX、CSS 等支持<code>开箱即用</code></li>
+</ol>
+<h2 id="Vite-的基本使用"><a href="#Vite-的基本使用" class="headerlink" title="Vite 的基本使用"></a>Vite 的基本使用</h2><ol>
+<li>创建普通vue项目<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn creat vite 项目名 --template vue</span><br></pre></td></tr></table></figure></li>
+<li>创建基于TS模板的项目<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">yarn creat vite 项目名 --template vue-ts</span><br></pre></td></tr></table></figure></li>
+</ol>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>前端构建工具</category>
+        <category>Vite</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>前端构建工具</tag>
+        <tag>Vite</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Webpack</title>
+    <url>/2024/04/25/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/Webpack/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>前端</category>
+        <category>前端构建工具</category>
+        <category>Webpack</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>前端构建工具</tag>
+        <tag>Webpack</tag>
       </tags>
   </entry>
   <entry>
