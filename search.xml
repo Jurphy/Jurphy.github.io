@@ -88,6 +88,23 @@
 ]]></content>
   </entry>
   <entry>
+    <title>可选链运算符（?.）</title>
+    <url>/2024/05/16/%E5%89%8D%E7%AB%AF/JS/%E5%8F%AF%E9%80%89%E9%93%BE%E8%BF%90%E7%AE%97%E7%AC%A6/</url>
+    <content><![CDATA[<h3 id="可选链运算符（-）"><a href="#可选链运算符（-）" class="headerlink" title="可选链运算符（?.）"></a>可选链运算符（?.）</h3><p>可选链运算符（<code>?.</code>）允许读取位于连接对象链深处的属性的值，而不必明确验证链中的每个引用是否有效。?. 运算符的功能类似于 . 链式运算符，不同之处在于，在引用为空 (nullish ) (null 或者 undefined) 的情况下不会引起错误，该表达式短路返回值是 undefined。与函数调用一起使用时，如果给定的函数不存在，则返回 undefined。</p>
+<p>比如，思考一个存在嵌套结构的对象 obj。不使用可选链的话，查找一个深度嵌套的子属性时，需要验证之间的引用，例如：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">let</span> nestedProp = obj.first &amp;&amp; obj.first.second;</span><br><span class="line"><span class="comment"># 可写为</span></span><br><span class="line"><span class="built_in">let</span> nestedProp = obj.first?.second;</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<p><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://jsd.cdn.zzko.cn/gh/Jurphy/Figure-bed/img/logo/font.png" alt="使用?.前"><br><img src= "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7" data-lazy-src="https://jsd.cdn.zzko.cn/gh/Jurphy/Figure-bed/img/logo/before.png" alt="使用?.后"></p>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>Javascript</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>Javascript</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Node版本切换</title>
     <url>/2024/04/25/%E5%89%8D%E7%AB%AF/Node/node/</url>
     <content><![CDATA[<h4 id="可以使用-n-模块进行node版本切换"><a href="#可以使用-n-模块进行node版本切换" class="headerlink" title="可以使用 n 模块进行node版本切换"></a>可以使用 n 模块进行node版本切换</h4><ul>
@@ -119,6 +136,22 @@
       <tags>
         <tag>前端</tag>
         <tag>Node</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>npm install XXXXX 加上-s、-d、-g和什么都不加的区别?</title>
+    <url>/2024/04/18/%E5%89%8D%E7%AB%AF/Npm/install/</url>
+    <content><![CDATA[<h3 id="npm-install-XXXXX-s-局部安装"><a href="#npm-install-XXXXX-s-局部安装" class="headerlink" title="npm install XXXXX -s(局部安装)"></a>npm install XXXXX -s(局部安装)</h3><p>相当于npm install XXXXX -save，是生产环境（dependencies）上的依赖，上线之后还需要用到的，例如安装：echarts和element-ui等。</p>
+<h3 id="npm-install-XXXXX-g-全局安装"><a href="#npm-install-XXXXX-g-全局安装" class="headerlink" title="npm install XXXXX -g(全局安装)"></a>npm install XXXXX -g(全局安装)</h3><p>相当于npm install XXXXX -global表示全局安装，安装一次过后，你就可以在其他地方直接用了。</p>
+<h3 id="npm-install-XXXXX-d-局部安装"><a href="#npm-install-XXXXX-d-局部安装" class="headerlink" title="npm install XXXXX -d(局部安装)"></a>npm install XXXXX -d(局部安装)</h3><p>相当于npm install module_name –save-dev，是开发环境（devDependencies ）下的依赖管理，只在开发阶段使用，例如安装：webpack、babel和vite等。</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>Npm</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>Npm</tag>
       </tags>
   </entry>
   <entry>
@@ -212,22 +245,6 @@
       <tags>
         <tag>前端</tag>
         <tag>TypeScript</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>npm install XXXXX 加上-s、-d、-g和什么都不加的区别?</title>
-    <url>/2024/04/18/%E5%89%8D%E7%AB%AF/Npm/install/</url>
-    <content><![CDATA[<h3 id="npm-install-XXXXX-s-局部安装"><a href="#npm-install-XXXXX-s-局部安装" class="headerlink" title="npm install XXXXX -s(局部安装)"></a>npm install XXXXX -s(局部安装)</h3><p>相当于npm install XXXXX -save，是生产环境（dependencies）上的依赖，上线之后还需要用到的，例如安装：echarts和element-ui等。</p>
-<h3 id="npm-install-XXXXX-g-全局安装"><a href="#npm-install-XXXXX-g-全局安装" class="headerlink" title="npm install XXXXX -g(全局安装)"></a>npm install XXXXX -g(全局安装)</h3><p>相当于npm install XXXXX -global表示全局安装，安装一次过后，你就可以在其他地方直接用了。</p>
-<h3 id="npm-install-XXXXX-d-局部安装"><a href="#npm-install-XXXXX-d-局部安装" class="headerlink" title="npm install XXXXX -d(局部安装)"></a>npm install XXXXX -d(局部安装)</h3><p>相当于npm install module_name –save-dev，是开发环境（devDependencies ）下的依赖管理，只在开发阶段使用，例如安装：webpack、babel和vite等。</p>
-]]></content>
-      <categories>
-        <category>前端</category>
-        <category>Npm</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>Npm</tag>
       </tags>
   </entry>
   <entry>
