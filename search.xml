@@ -139,6 +139,22 @@
       </tags>
   </entry>
   <entry>
+    <title>npm install XXXXX 加上-s、-d、-g和什么都不加的区别?</title>
+    <url>/2024/04/18/%E5%89%8D%E7%AB%AF/Npm/install/</url>
+    <content><![CDATA[<h3 id="npm-install-XXXXX-s-局部安装"><a href="#npm-install-XXXXX-s-局部安装" class="headerlink" title="npm install XXXXX -s(局部安装)"></a>npm install XXXXX -s(局部安装)</h3><p>相当于npm install XXXXX -save，是生产环境（dependencies）上的依赖，上线之后还需要用到的，例如安装：echarts和element-ui等。</p>
+<h3 id="npm-install-XXXXX-g-全局安装"><a href="#npm-install-XXXXX-g-全局安装" class="headerlink" title="npm install XXXXX -g(全局安装)"></a>npm install XXXXX -g(全局安装)</h3><p>相当于npm install XXXXX -global表示全局安装，安装一次过后，你就可以在其他地方直接用了。</p>
+<h3 id="npm-install-XXXXX-d-局部安装"><a href="#npm-install-XXXXX-d-局部安装" class="headerlink" title="npm install XXXXX -d(局部安装)"></a>npm install XXXXX -d(局部安装)</h3><p>相当于npm install module_name –save-dev，是开发环境（devDependencies ）下的依赖管理，只在开发阶段使用，例如安装：webpack、babel和vite等。</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>Npm</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>Npm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>TypeScript</title>
     <url>/2024/04/18/%E5%89%8D%E7%AB%AF/TS/TypeScript/</url>
     <content><![CDATA[<h1 id="TypeScript的基本概念"><a href="#TypeScript的基本概念" class="headerlink" title="TypeScript的基本概念"></a>TypeScript的基本概念</h1><h2 id="TS是什么？"><a href="#TS是什么？" class="headerlink" title="TS是什么？"></a>TS是什么？</h2><ol>
@@ -252,19 +268,18 @@
       </tags>
   </entry>
   <entry>
-    <title>npm install XXXXX 加上-s、-d、-g和什么都不加的区别?</title>
-    <url>/2024/04/18/%E5%89%8D%E7%AB%AF/Npm/install/</url>
-    <content><![CDATA[<h3 id="npm-install-XXXXX-s-局部安装"><a href="#npm-install-XXXXX-s-局部安装" class="headerlink" title="npm install XXXXX -s(局部安装)"></a>npm install XXXXX -s(局部安装)</h3><p>相当于npm install XXXXX -save，是生产环境（dependencies）上的依赖，上线之后还需要用到的，例如安装：echarts和element-ui等。</p>
-<h3 id="npm-install-XXXXX-g-全局安装"><a href="#npm-install-XXXXX-g-全局安装" class="headerlink" title="npm install XXXXX -g(全局安装)"></a>npm install XXXXX -g(全局安装)</h3><p>相当于npm install XXXXX -global表示全局安装，安装一次过后，你就可以在其他地方直接用了。</p>
-<h3 id="npm-install-XXXXX-d-局部安装"><a href="#npm-install-XXXXX-d-局部安装" class="headerlink" title="npm install XXXXX -d(局部安装)"></a>npm install XXXXX -d(局部安装)</h3><p>相当于npm install module_name –save-dev，是开发环境（devDependencies ）下的依赖管理，只在开发阶段使用，例如安装：webpack、babel和vite等。</p>
-]]></content>
+    <title>Webpack</title>
+    <url>/2024/04/25/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/Webpack/</url>
+    <content><![CDATA[]]></content>
       <categories>
         <category>前端</category>
-        <category>Npm</category>
+        <category>前端构建工具</category>
+        <category>Webpack</category>
       </categories>
       <tags>
         <tag>前端</tag>
-        <tag>Npm</tag>
+        <tag>前端构建工具</tag>
+        <tag>Webpack</tag>
       </tags>
   </entry>
   <entry>
@@ -290,21 +305,6 @@
         <tag>前端</tag>
         <tag>前端构建工具</tag>
         <tag>Vite</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Webpack</title>
-    <url>/2024/04/25/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/Webpack/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>前端</category>
-        <category>前端构建工具</category>
-        <category>Webpack</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>前端构建工具</tag>
-        <tag>Webpack</tag>
       </tags>
   </entry>
   <entry>
@@ -346,6 +346,36 @@
         <tag>前端</tag>
         <tag>状态管理</tag>
         <tag>Pinia</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>测试分类</title>
+    <url>/2024/04/22/%E6%B5%8B%E8%AF%95/%E6%B5%8B%E8%AF%95%E5%9F%BA%E7%A1%80/%E6%B5%8B%E8%AF%95%E5%88%86%E7%B1%BB/</url>
+    <content><![CDATA[<h1 id="软件测试的分类"><a href="#软件测试的分类" class="headerlink" title="软件测试的分类"></a>软件测试的分类</h1><h2 id="按阶段划分"><a href="#按阶段划分" class="headerlink" title="按阶段划分"></a>按阶段划分</h2><ol>
+<li>单元测试：针对程序源代码的测试【开发】</li>
+<li>集成测试：针对功能模块组装的测试</li>
+<li>系统测试：针对整个系统（功能、非功能）进行测试</li>
+<li>验收测试：以用户身份验证系统是否满足需求【用户】</li>
+</ol>
+<h2 id="按代码可见度分类"><a href="#按代码可见度分类" class="headerlink" title="按代码可见度分类"></a>按代码可见度分类</h2><ol>
+<li>黑盒测试：针对有UI界面软件系统输入输出类测试</li>
+<li>灰盒测试：针对无UI界面软件系统输入输出和内部逻辑结构的测试（能看到部分源代码）</li>
+<li>白盒测试：针对程序源代码及内部逻辑本身进行测试</li>
+</ol>
+<h2 id="按其他划分"><a href="#按其他划分" class="headerlink" title="按其他划分"></a>按其他划分</h2><ol>
+<li>冒烟测试：保障提测内容具备可测性</li>
+<li>回归测试：对已修复功能\更新后对已测内容再次测试</li>
+</ol>
+]]></content>
+      <categories>
+        <category>测试</category>
+        <category>测试基础</category>
+        <category>测试分类</category>
+      </categories>
+      <tags>
+        <tag>测试</tag>
+        <tag>测试基础</tag>
+        <tag>测试分类</tag>
       </tags>
   </entry>
   <entry>
