@@ -105,6 +105,22 @@
       </tags>
   </entry>
   <entry>
+    <title>npm install XXXXX 加上-s、-d、-g和什么都不加的区别?</title>
+    <url>/2024/04/18/%E5%89%8D%E7%AB%AF/Npm/install/</url>
+    <content><![CDATA[<h3 id="npm-install-XXXXX-s-局部安装"><a href="#npm-install-XXXXX-s-局部安装" class="headerlink" title="npm install XXXXX -s(局部安装)"></a>npm install XXXXX -s(局部安装)</h3><p>相当于npm install XXXXX -save，是生产环境（dependencies）上的依赖，上线之后还需要用到的，例如安装：echarts和element-ui等。</p>
+<h3 id="npm-install-XXXXX-g-全局安装"><a href="#npm-install-XXXXX-g-全局安装" class="headerlink" title="npm install XXXXX -g(全局安装)"></a>npm install XXXXX -g(全局安装)</h3><p>相当于npm install XXXXX -global表示全局安装，安装一次过后，你就可以在其他地方直接用了。</p>
+<h3 id="npm-install-XXXXX-d-局部安装"><a href="#npm-install-XXXXX-d-局部安装" class="headerlink" title="npm install XXXXX -d(局部安装)"></a>npm install XXXXX -d(局部安装)</h3><p>相当于npm install module_name –save-dev，是开发环境（devDependencies ）下的依赖管理，只在开发阶段使用，例如安装：webpack、babel和vite等。</p>
+]]></content>
+      <categories>
+        <category>前端</category>
+        <category>Npm</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>Npm</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Node版本切换</title>
     <url>/2024/04/25/%E5%89%8D%E7%AB%AF/Node/node/</url>
     <content><![CDATA[<h4 id="可以使用-n-模块进行node版本切换"><a href="#可以使用-n-模块进行node版本切换" class="headerlink" title="可以使用 n 模块进行node版本切换"></a>可以使用 n 模块进行node版本切换</h4><ul>
@@ -136,22 +152,6 @@
       <tags>
         <tag>前端</tag>
         <tag>Node</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>npm install XXXXX 加上-s、-d、-g和什么都不加的区别?</title>
-    <url>/2024/04/18/%E5%89%8D%E7%AB%AF/Npm/install/</url>
-    <content><![CDATA[<h3 id="npm-install-XXXXX-s-局部安装"><a href="#npm-install-XXXXX-s-局部安装" class="headerlink" title="npm install XXXXX -s(局部安装)"></a>npm install XXXXX -s(局部安装)</h3><p>相当于npm install XXXXX -save，是生产环境（dependencies）上的依赖，上线之后还需要用到的，例如安装：echarts和element-ui等。</p>
-<h3 id="npm-install-XXXXX-g-全局安装"><a href="#npm-install-XXXXX-g-全局安装" class="headerlink" title="npm install XXXXX -g(全局安装)"></a>npm install XXXXX -g(全局安装)</h3><p>相当于npm install XXXXX -global表示全局安装，安装一次过后，你就可以在其他地方直接用了。</p>
-<h3 id="npm-install-XXXXX-d-局部安装"><a href="#npm-install-XXXXX-d-局部安装" class="headerlink" title="npm install XXXXX -d(局部安装)"></a>npm install XXXXX -d(局部安装)</h3><p>相当于npm install module_name –save-dev，是开发环境（devDependencies ）下的依赖管理，只在开发阶段使用，例如安装：webpack、babel和vite等。</p>
-]]></content>
-      <categories>
-        <category>前端</category>
-        <category>Npm</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>Npm</tag>
       </tags>
   </entry>
   <entry>
@@ -268,21 +268,6 @@
       </tags>
   </entry>
   <entry>
-    <title>Webpack</title>
-    <url>/2024/04/25/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/Webpack/</url>
-    <content><![CDATA[]]></content>
-      <categories>
-        <category>前端</category>
-        <category>前端构建工具</category>
-        <category>Webpack</category>
-      </categories>
-      <tags>
-        <tag>前端</tag>
-        <tag>前端构建工具</tag>
-        <tag>Webpack</tag>
-      </tags>
-  </entry>
-  <entry>
     <title>Vite</title>
     <url>/2024/04/22/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/Vite/</url>
     <content><![CDATA[<h1 id="Vite的介绍"><a href="#Vite的介绍" class="headerlink" title="Vite的介绍"></a>Vite的介绍</h1><h2 id="Vite的优势"><a href="#Vite的优势" class="headerlink" title="Vite的优势"></a>Vite的优势</h2><p><a href="https://vitejs.cn/">Vite官方文档</a></p>
@@ -305,6 +290,21 @@
         <tag>前端</tag>
         <tag>前端构建工具</tag>
         <tag>Vite</tag>
+      </tags>
+  </entry>
+  <entry>
+    <title>Webpack</title>
+    <url>/2024/04/25/%E5%89%8D%E7%AB%AF/%E5%89%8D%E7%AB%AF%E6%9E%84%E5%BB%BA%E5%B7%A5%E5%85%B7/Webpack/</url>
+    <content><![CDATA[]]></content>
+      <categories>
+        <category>前端</category>
+        <category>前端构建工具</category>
+        <category>Webpack</category>
+      </categories>
+      <tags>
+        <tag>前端</tag>
+        <tag>前端构建工具</tag>
+        <tag>Webpack</tag>
       </tags>
   </entry>
   <entry>
